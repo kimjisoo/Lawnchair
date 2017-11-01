@@ -30,14 +30,6 @@ android {
     compileSdkVersion 26
     buildToolsVersion '26.0.2'
 
-    signingConfigs {
-        travis {
-            storeFile file("debug.jks")
-            storePassword System.getenv("STORE_PASSWORD")
-            keyAlias "Lawnchair"
-            keyPassword System.getenv("KEY_PASSWORD")
-        }
-    }
     defaultConfig {
         minSdkVersion 21
         targetSdkVersion 26
@@ -68,9 +60,6 @@ android {
                 minifyEnabled true
                 shrinkResources true
                 proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-                if (System.getenv("TRAVIS_EVENT_TYPE") != "pull_request") {
-                    signingConfig signingConfigs.travis
-                }
             } else {
                 minifyEnabled false
             }
@@ -82,9 +71,6 @@ android {
             minifyEnabled true
             shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            if (System.getenv("TRAVIS_EVENT_TYPE") != "pull_request") {
-                signingConfig signingConfigs.travis
-            }
         }
     }
     lintOptions {
