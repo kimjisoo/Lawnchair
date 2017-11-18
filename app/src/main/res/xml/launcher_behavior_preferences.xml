@@ -77,7 +77,7 @@
         android:defaultValue="false"
         android:persistent="true" />
     
-    <ch.deletescape.lawnchair.preferences.GoogleNowPreference
+    <ch.deletescape.lawnsearch.preferences.GoogleNowPreference
         android:key="pref_showGoogleNowTab"
         android:persistent="true"
         android:title="@string/show_google_now_tab_pref_title"

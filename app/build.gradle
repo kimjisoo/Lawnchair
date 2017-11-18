@@ -33,7 +33,7 @@ android {
     defaultConfig {
         minSdkVersion 21
         targetSdkVersion 27
-        applicationId "ch.deletescape.lawnchair"
+        applicationId "ch.deletescape.lawnsearch"
 
         buildConfigField "boolean", "TRAVIS", System.getenv("TRAVIS") ?: "false"
         buildConfigField "boolean", "TAGGED_BUILD", System.getenv("TRAVIS_TAG") ? "true" : "false"

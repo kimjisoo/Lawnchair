@@ -44,7 +44,7 @@
             android:summary="%s"
             android:persistent="true" />
 
-        <ch.deletescape.lawnchair.preferences.SeekbarPreference
+        <ch.deletescape.lawnsearch.preferences.SeekbarPreference
             android:key="pref_hotseatIconScale"
             android:title="@string/icon_scale_pref_title"
             app:minValue="0.3"
@@ -55,7 +55,7 @@
             app:steps="120"
             android:persistent="true" />
 
-        <ch.deletescape.lawnchair.preferences.SeekbarPreference
+        <ch.deletescape.lawnsearch.preferences.SeekbarPreference
             android:key="pref_hotseatHeightScale"
             android:title="@string/hotseat_height_scale"
             app:minValue="0.5"

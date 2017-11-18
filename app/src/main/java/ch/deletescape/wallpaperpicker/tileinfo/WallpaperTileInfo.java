@@ -10,7 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import ch.deletescape.lawnchair.R;
+import ch.deletescape.lawnsearch.R;
 import ch.deletescape.wallpaperpicker.WallpaperPickerActivity;
 import ch.deletescape.wallpaperpicker.common.InputStreamProvider;
 import ch.deletescape.wallpaperpicker.common.Utils;

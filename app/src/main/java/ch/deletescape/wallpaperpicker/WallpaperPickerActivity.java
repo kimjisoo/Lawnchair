@@ -42,8 +42,8 @@ import android.widget.LinearLayout;
 import java.util.ArrayList;
 import java.util.List;
 
-import ch.deletescape.lawnchair.R;
-import ch.deletescape.lawnchair.Utilities;
+import ch.deletescape.lawnsearch.R;
+import ch.deletescape.lawnsearch.Utilities;
 import ch.deletescape.wallpaperpicker.tileinfo.LiveWallpaperInfo;
 import ch.deletescape.wallpaperpicker.tileinfo.PickImageInfo;
 import ch.deletescape.wallpaperpicker.tileinfo.ThirdPartyWallpaperInfo;

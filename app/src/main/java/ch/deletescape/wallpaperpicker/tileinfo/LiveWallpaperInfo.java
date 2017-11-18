@@ -25,7 +25,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-import ch.deletescape.lawnchair.R;
+import ch.deletescape.lawnsearch.R;
 import ch.deletescape.wallpaperpicker.WallpaperPickerActivity;
 
 public class LiveWallpaperInfo extends WallpaperTileInfo {

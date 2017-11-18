@@ -14,7 +14,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
-import ch.deletescape.lawnchair.R;
+import ch.deletescape.lawnsearch.R;
 import ch.deletescape.wallpaperpicker.WallpaperPickerActivity;
 
 public class PickImageInfo extends WallpaperTileInfo {

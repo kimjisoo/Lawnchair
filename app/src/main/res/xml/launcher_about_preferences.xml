@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <ch.deletescape.lawnchair.settings.ui.AboutPreference
+    <ch.deletescape.lawnsearch.settings.ui.AboutPreference
         android:title="@string/about_summary_title"
         android:key="about"
         android:summary="@string/about_text" />

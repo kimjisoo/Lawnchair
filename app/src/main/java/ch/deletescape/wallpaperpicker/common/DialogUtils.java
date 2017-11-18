@@ -5,8 +5,8 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.os.AsyncTask;
 
-import ch.deletescape.lawnchair.R;
-import ch.deletescape.lawnchair.Utilities;
+import ch.deletescape.lawnsearch.R;
+import ch.deletescape.lawnsearch.Utilities;
 
 /**
  * Utility class used to show dialogs for things like picking which wallpaper to set.

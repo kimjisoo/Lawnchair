@@ -40,7 +40,7 @@ import java.util.Collections;
 import java.util.Set;
 import java.util.WeakHashMap;
 
-import ch.deletescape.lawnchair.R;
+import ch.deletescape.lawnsearch.R;
 import ch.deletescape.wallpaperpicker.BitmapRegionTileSource.BitmapSource;
 import ch.deletescape.wallpaperpicker.BitmapRegionTileSource.BitmapSource.InBitmapProvider;
 import ch.deletescape.wallpaperpicker.common.CropAndSetWallpaperTask;

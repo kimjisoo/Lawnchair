@@ -11,7 +11,7 @@ import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 
-import ch.deletescape.lawnchair.R;
+import ch.deletescape.lawnsearch.R;
 import ch.deletescape.wallpaperpicker.BitmapRegionTileSource;
 import ch.deletescape.wallpaperpicker.BitmapRegionTileSource.BitmapSource;
 import ch.deletescape.wallpaperpicker.WallpaperPickerActivity;

@@ -16,8 +16,8 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 
-import ch.deletescape.lawnchair.R;
-import ch.deletescape.lawnchair.Utilities;
+import ch.deletescape.lawnsearch.R;
+import ch.deletescape.lawnsearch.Utilities;
 import ch.deletescape.wallpaperpicker.WallpaperPickerActivity;
 
 public class ThirdPartyWallpaperInfo extends WallpaperTileInfo {

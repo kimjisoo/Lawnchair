@@ -26,7 +26,7 @@ import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 
-import ch.deletescape.lawnchair.R;
+import ch.deletescape.lawnsearch.R;
 
 public class CropAndSetWallpaperTask extends AsyncTask<Integer, Void, Boolean> {
 

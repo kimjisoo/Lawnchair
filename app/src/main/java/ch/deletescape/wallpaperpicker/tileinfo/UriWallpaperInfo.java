@@ -9,7 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
-import ch.deletescape.lawnchair.R;
+import ch.deletescape.lawnsearch.R;
 import ch.deletescape.wallpaperpicker.BitmapRegionTileSource;
 import ch.deletescape.wallpaperpicker.BitmapRegionTileSource.BitmapSource;
 import ch.deletescape.wallpaperpicker.WallpaperPickerActivity;

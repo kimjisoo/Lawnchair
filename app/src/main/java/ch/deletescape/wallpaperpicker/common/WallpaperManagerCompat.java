@@ -6,7 +6,7 @@ import android.graphics.Rect;
 import java.io.IOException;
 import java.io.InputStream;
 
-import ch.deletescape.lawnchair.Utilities;
+import ch.deletescape.lawnsearch.Utilities;
 
 public abstract class WallpaperManagerCompat {
     public static final int FLAG_SET_SYSTEM = 1 << 0; // TODO: use WallpaperManager.FLAG_SET_SYSTEM
