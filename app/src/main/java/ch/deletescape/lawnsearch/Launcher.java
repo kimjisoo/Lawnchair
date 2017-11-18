@@ -870,13 +870,7 @@ public class Launcher extends Activity
 
         setScreenOrientation();
         // Restore the previous launcher state
-        if (mOnResumeState == State.WORKSPACE) {
-            showWorkspace(false);
-        } else if (mOnResumeState == State.APPS) {
-            showAppsView(false /* animated */, mAppsView.shouldRestoreImeState() /* focusSearchBar */);
-        } else if (mOnResumeState == State.WIDGETS) {
-            showWidgetsView(false, false);
-        }
+        showAppsView(true /* animated */, false /* focusSearchBar */);
         mOnResumeState = State.NONE;
 
         mPaused = false;
