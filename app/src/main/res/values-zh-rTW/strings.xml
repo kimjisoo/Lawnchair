@@ -242,10 +242,10 @@
   <string name="shortcuts_menu_with_notifications_description">%1$d 捷徑和 %3$s 的 %2$d 通知</string>
   <string name="notifications_header">通知</string>
   <string name="widgets_bottom_sheet_title">%1$s 小工具</string>
-  <!-- About Lawnchair -->
-  <string name="about_text">Lawnchair 是由 Till Kottmann(deletescape) 建立的啟動器應用程式，基於 AOSP 的 Launcher3。</string>
+  <!-- About Lawnsearch -->
+  <string name="about_text">Lawnsearch 是由 Till Kottmann(deletescape) 建立的啟動器應用程式，基於 AOSP 的 Launcher3。</string>
   <string name="about_title">關於</string>
-  <string name="about_pref_summary">瞭解 Lawnchair 團隊</string>
+  <string name="about_pref_summary">瞭解 Lawnsearch 團隊</string>
   <string name="changelog_title">更新日誌 #%d</string>
   <string name="week_day_format">%1$s：%2$s</string>
   <string name="icon_pack_preference_title">圖示包</string>
@@ -277,7 +277,7 @@
   <string name="full_width_width_widgets_pref_title">全寬小工具</string>
   <string name="full_width_widgets_pref_summary">允許小工具填滿桌面寬度</string>
   <string name="notification_access_pref_title">未讀計數和預覽</string>
-  <string name="notification_access_pref_summary">允許 Lawnchair 訪問您的通知許可權以啟用此功能</string>
+  <string name="notification_access_pref_summary">允許 Lawnsearch 訪問您的通知許可權以啟用此功能</string>
   <string name="general_pref_title">一般</string>
   <string name="dock_pref_title">Dock欄</string>
   <string name="app_drawer_pref_title">應用程式清單</string>
@@ -290,7 +290,7 @@
   <string name="app_drawer_pref_summary">自訂您的應用程式抽屜</string>
   <string name="pixel_ui_pref_summary">開啟Pixel 啟動器特殊功能</string>
   <string name="backup_pref_title">備份</string>
-  <string name="behavior_pref_summary">改變 Lawnchair 的特性</string>
+  <string name="behavior_pref_summary">改變 Lawnsearch 的特性</string>
   <string name="backup_pref_summary">備份您的資料和設定</string>
   <string name="debug_pref_summary">重新啟動或重建圖示資料</string>
   <string name="show_pixel_bar_pref_title">顯示Pixel頂欄</string>
@@ -300,7 +300,7 @@
   <string name="pixel_style_icons_pref_title">使用Pixel圖示</string>
   <string name="pixel_style_icons_pref_summary">儘可能使用圓形圖示</string>
   <string name="show_google_now_tab_pref_title">顯示 Google Now 頁面</string>
-  <string name="restart_lawnchair_pref_title">重新啟動 Lawnchair</string>
+  <string name="restart_lawnchair_pref_title">重新啟動 Lawnsearch</string>
   <string name="restart_lawnchair_pref_summary">如果某些設置未正確應用，可能會有所幫助</string>
   <string name="rebuild_icondb_pref_title">重建圖示快取</string>
   <string name="pinch_to_overview_pref_title">捏合來概覽</string>
@@ -320,8 +320,8 @@
   <string name="import_db_title">Import database</string>
   <string name="export_prefs_title">Export settings</string>
   <string name="import_prefs_title">Import settings</string>
-  <string name="notification_listener_label">Lawnchair－未讀計數</string>
-  <string name="color_extraction_label">Lawnchair－顏色提取</string>
+  <string name="notification_listener_label">Lawnsearch－未讀計數</string>
+  <string name="color_extraction_label">Lawnsearch－顏色提取</string>
   <string name="test_title">測試</string>
   <string name="visibility">可見性</string>
   <string name="default_text">預設</string>

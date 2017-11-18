@@ -244,10 +244,10 @@
   <string name="shortcuts_menu_with_notifications_description">%1$d zástupci a %2$d oznámení pro %3$s</string>
   <string name="notifications_header">Oznámení</string>
   <string name="widgets_bottom_sheet_title">%1$s widgety</string>
-  <!-- About Lawnchair -->
-  <string name="about_text">Lawnchair je aplikace spouštěče, kterou vytvořil Till Kottmann (aka deletescape). Je založena na spouštěči Launcher3 z AOSP.</string>
+  <!-- About Lawnsearch -->
+  <string name="about_text">Lawnsearch je aplikace spouštěče, kterou vytvořil Till Kottmann (aka deletescape). Je založena na spouštěči Launcher3 z AOSP.</string>
   <string name="about_title">O aplikaci</string>
-  <string name="about_pref_summary">Seznamte se s týmem Lawnchair</string>
+  <string name="about_pref_summary">Seznamte se s týmem Lawnsearch</string>
   <string name="changelog_title">Seznam změn pro sestavení #%d</string>
   <string name="week_day_format">%1$s, %2$s</string>
   <string name="icon_pack_preference_title">Balíček ikon</string>
@@ -279,7 +279,7 @@
   <string name="full_width_width_widgets_pref_title">Widgety s plnou šířkou</string>
   <string name="full_width_widgets_pref_summary">Povolte widgetům pokrývat celou šířku bez odsazení</string>
   <string name="notification_access_pref_title">Zobrazení oznámení a náhledů</string>
-  <string name="notification_access_pref_summary">Pro zapnutí této funkce povolte spouštěči Lawnchair přístup k vašim upozorněním</string>
+  <string name="notification_access_pref_summary">Pro zapnutí této funkce povolte spouštěči Lawnsearch přístup k vašim upozorněním</string>
   <string name="general_pref_title">Obecné</string>
   <string name="dock_pref_title">Dok</string>
   <string name="app_drawer_pref_title">Seznam aplikací</string>
@@ -292,7 +292,7 @@
   <string name="app_drawer_pref_summary">Přizpůsobit seznam aplikací</string>
   <string name="pixel_ui_pref_summary">Povolit exkluzivní funkce spouštěče Pixel</string>
   <string name="backup_pref_title">Zálohování</string>
-  <string name="behavior_pref_summary">Změnit chování Lawnchair</string>
+  <string name="behavior_pref_summary">Změnit chování Lawnsearch</string>
   <string name="backup_pref_summary">Zálohovat databázi a nastavení</string>
   <string name="debug_pref_summary">Restartovat nebo znovu vytvořit ikonu databáze</string>
   <string name="show_pixel_bar_pref_title">Zobrazit Pixel horní panel</string>
@@ -302,7 +302,7 @@
   <string name="pixel_style_icons_pref_title">Použít ikony Pixel</string>
   <string name="pixel_style_icons_pref_summary">Pokud budou povoleny kruhové ikony, budou použity všude, kde je to možné</string>
   <string name="show_google_now_tab_pref_title">Zobrazit stránku Google Now</string>
-  <string name="restart_lawnchair_pref_title">Restartovat Lawnchair</string>
+  <string name="restart_lawnchair_pref_title">Restartovat Lawnsearch</string>
   <string name="restart_lawnchair_pref_summary">Může být užitečné v případě, že některá nastavení nejsou použita správně</string>
   <string name="rebuild_icondb_pref_title">Znovu vytvořit databázi ikon</string>
   <string name="pinch_to_overview_pref_title">Přepnout na přehled</string>
@@ -322,8 +322,8 @@
   <string name="import_db_title">Import databáze</string>
   <string name="export_prefs_title">Export nastavení</string>
   <string name="import_prefs_title">Import nastavení</string>
-  <string name="notification_listener_label">Lawnchair - indikátor oznámení</string>
-  <string name="color_extraction_label">Lawnchair - Extrakce barev</string>
+  <string name="notification_listener_label">Lawnsearch - indikátor oznámení</string>
+  <string name="color_extraction_label">Lawnsearch - Extrakce barev</string>
   <string name="test_title">Zkouška</string>
   <string name="visibility">Viditelnost</string>
   <string name="default_text">Výchozí</string>

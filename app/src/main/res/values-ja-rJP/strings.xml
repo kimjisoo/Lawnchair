@@ -242,10 +242,10 @@
   <string name="shortcuts_menu_with_notifications_description">%1$d のショートカットと %3$s の %2$d 通知</string>
   <string name="notifications_header">通知</string>
   <string name="widgets_bottom_sheet_title">%1$s ウィジェット</string>
-  <!-- About Lawnchair -->
-  <string name="about_text">Lawnchair はTill Kottmann（ deletescape としても知られています）によって作成されたランチャーアプリです。AOSP の Launcher3 に基づいて出来ています。</string>
-  <string name="about_title">Lawnchair について</string>
-  <string name="about_pref_summary">Lawnchair チームについてもっと知りましょう</string>
+  <!-- About Lawnsearch -->
+  <string name="about_text">Lawnsearch はTill Kottmann（ deletescape としても知られています）によって作成されたランチャーアプリです。AOSP の Launcher3 に基づいて出来ています。</string>
+  <string name="about_title">Lawnsearch について</string>
+  <string name="about_pref_summary">Lawnsearch チームについてもっと知りましょう</string>
   <string name="changelog_title">ビルド #%d のための変更履歴</string>
   <string name="week_day_format">%1$s, %2$s</string>
   <string name="icon_pack_preference_title">アイコンパック</string>
@@ -277,7 +277,7 @@
   <string name="full_width_width_widgets_pref_title">全幅ウィジェット</string>
   <string name="full_width_widgets_pref_summary">ウィジェットがパディングなしで幅全体にまたがることを許可する</string>
   <string name="notification_access_pref_title">通知バッジとプレビュー</string>
-  <string name="notification_access_pref_summary">Lawnchairにこの機能を有効にするための通知にアクセスさせる</string>
+  <string name="notification_access_pref_summary">Lawnsearchにこの機能を有効にするための通知にアクセスさせる</string>
   <string name="general_pref_title">全般</string>
   <string name="dock_pref_title">ドック</string>
   <string name="app_drawer_pref_title">アプリドロワー</string>
@@ -290,7 +290,7 @@
   <string name="app_drawer_pref_summary">アプリドロワーをカスタマイズします</string>
   <string name="pixel_ui_pref_summary">Pixel Launcherの特徴的な機能を有効にします</string>
   <string name="backup_pref_title">バックアップ</string>
-  <string name="behavior_pref_summary">Lawnchairの動作設定を変更します</string>
+  <string name="behavior_pref_summary">Lawnsearchの動作設定を変更します</string>
   <string name="backup_pref_summary">データベースと設定をバックアップ</string>
   <string name="debug_pref_summary">再起動またはアイコンデータベースの再構築</string>
   <string name="show_pixel_bar_pref_title">Pixelのトップバーを表示する</string>
@@ -300,7 +300,7 @@
   <string name="pixel_style_icons_pref_title">Pixel アイコンを使用する</string>
   <string name="pixel_style_icons_pref_summary">有効になっている場合は可能な限り円形のアイコンが使用されます</string>
   <string name="show_google_now_tab_pref_title">Google Now ページを表示する</string>
-  <string name="restart_lawnchair_pref_title"> Lawnchair を再起動</string>
+  <string name="restart_lawnchair_pref_title"> Lawnsearch を再起動</string>
   <string name="restart_lawnchair_pref_summary">一部の設定が正しく適用されない場合に役立ちます</string>
   <string name="rebuild_icondb_pref_title">アイコンデータベースを再構築する</string>
   <string name="pinch_to_overview_pref_title">概要にピンチ</string>
@@ -320,8 +320,8 @@
   <string name="import_db_title">データベース</string>
   <string name="export_prefs_title">設定</string>
   <string name="import_prefs_title">設定</string>
-  <string name="notification_listener_label">Lawnchair - 通知バッジ</string>
-  <string name="color_extraction_label">Lawnchair - 色の抽出</string>
+  <string name="notification_listener_label">Lawnsearch - 通知バッジ</string>
+  <string name="color_extraction_label">Lawnsearch - 色の抽出</string>
   <string name="test_title">テスト</string>
   <string name="visibility">可視性</string>
   <string name="default_text">デフォルト</string>

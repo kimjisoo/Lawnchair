@@ -244,10 +244,10 @@ Pots suprimir-la o cercar l\'aplicació i instal·lar-la manualment.    </string
   <string name="shortcuts_menu_with_notifications_description">%1$d dreceres i %2$d notificacions per %3$s</string>
   <string name="notifications_header">Notificacions</string>
   <string name="widgets_bottom_sheet_title">%1$s ginys</string>
-  <!-- About Lawnchair -->
-  <string name="about_text">Lawnchair és un app launcher creada per fins a Kottmann (àlies deletescape). Es basa en Launcher3 de AOSP.</string>
+  <!-- About Lawnsearch -->
+  <string name="about_text">Lawnsearch és un app launcher creada per fins a Kottmann (àlies deletescape). Es basa en Launcher3 de AOSP.</string>
   <string name="about_title">Quant a</string>
-  <string name="about_pref_summary">Coneixeu l\'equip de Lawnchair</string>
+  <string name="about_pref_summary">Coneixeu l\'equip de Lawnsearch</string>
   <string name="changelog_title">Registre de canvis per al muntatge #%d</string>
   <string name="week_day_format">%1$s, %2$s</string>
   <string name="icon_pack_preference_title">Paquet d\'icones</string>
@@ -279,7 +279,7 @@ Pots suprimir-la o cercar l\'aplicació i instal·lar-la manualment.    </string
   <string name="full_width_width_widgets_pref_title">Widgets d\'amplada completa</string>
   <string name="full_width_widgets_pref_summary">Permet que els widgets apareguin ocupant tota l\'amplada</string>
   <string name="notification_access_pref_title">Distintius de notificació i previsualització</string>
-  <string name="notification_access_pref_summary">Permet a Lawnchair accedir a les teves notificacions per habilitar aquesta característica</string>
+  <string name="notification_access_pref_summary">Permet a Lawnsearch accedir a les teves notificacions per habilitar aquesta característica</string>
   <string name="general_pref_title">General</string>
   <string name="dock_pref_title">Barra de aplicação</string>
   <string name="app_drawer_pref_title">Gaveta de aplicativos</string>
@@ -292,7 +292,7 @@ Pots suprimir-la o cercar l\'aplicació i instal·lar-la manualment.    </string
   <string name="app_drawer_pref_summary">Personalize sua página de aplicativos</string>
   <string name="pixel_ui_pref_summary">Habilita característiques exclusives de Pixel Launcher</string>
   <string name="backup_pref_title">Còpia de seguretat</string>
-  <string name="behavior_pref_summary">Canvia el comportament de Lawnchair</string>
+  <string name="behavior_pref_summary">Canvia el comportament de Lawnsearch</string>
   <string name="backup_pref_summary">Fer una còpia de la base de dades i la configuració</string>
   <string name="debug_pref_summary">Reiniciar o reconstruïr la base de dades d\'icones</string>
   <string name="show_pixel_bar_pref_title">Mostra la barra superior de Pixel</string>
@@ -302,7 +302,7 @@ Pots suprimir-la o cercar l\'aplicació i instal·lar-la manualment.    </string
   <string name="pixel_style_icons_pref_title">Utilitzar icones de Pixel</string>
   <string name="pixel_style_icons_pref_summary">Quan les icones circulars estiguin activades seran utilitzades on sigui possible</string>
   <string name="show_google_now_tab_pref_title">Mostrar pàgina de Google Now</string>
-  <string name="restart_lawnchair_pref_title">Reiniciar Lawnchair</string>
+  <string name="restart_lawnchair_pref_title">Reiniciar Lawnsearch</string>
   <string name="restart_lawnchair_pref_summary">Pot ser útil si algunes opcions no estan ben aplicades</string>
   <string name="rebuild_icondb_pref_title">Reconstruïr base de dades d\'icones</string>
   <string name="pinch_to_overview_pref_title">Prem per previsualitzar</string>
@@ -322,8 +322,8 @@ Pots suprimir-la o cercar l\'aplicació i instal·lar-la manualment.    </string
   <string name="import_db_title">Base de dades</string>
   <string name="export_prefs_title">Configuració</string>
   <string name="import_prefs_title">Configuració</string>
-  <string name="notification_listener_label">Lawnchair - Medalles de notificació</string>
-  <string name="color_extraction_label">Lawnchair - Extracció de color</string>
+  <string name="notification_listener_label">Lawnsearch - Medalles de notificació</string>
+  <string name="color_extraction_label">Lawnsearch - Extracció de color</string>
   <string name="test_title">Prova</string>
   <string name="visibility">Visibilitat</string>
   <string name="default_text">Per defecte</string>

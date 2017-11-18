@@ -242,10 +242,10 @@
   <string name="shortcuts_menu_with_notifications_description">%3$s 有 %1$d 个快捷方式和 %2$d 个通知</string>
   <string name="notifications_header">通知</string>
   <string name="widgets_bottom_sheet_title">%1$s 微件</string>
-  <!-- About Lawnchair -->
-  <string name="about_text">Lawnchair 是 Till Kottmann（又名deletescape）基于 AOSP 的 Launcher3 所开发的启动器应用程序。</string>
+  <!-- About Lawnsearch -->
+  <string name="about_text">Lawnsearch 是 Till Kottmann（又名deletescape）基于 AOSP 的 Launcher3 所开发的启动器应用程序。</string>
   <string name="about_title">关于</string>
-  <string name="about_pref_summary">了解 Lawnchair 团队</string>
+  <string name="about_pref_summary">了解 Lawnsearch 团队</string>
   <string name="changelog_title">#%d 版的更新日志</string>
   <string name="week_day_format">%1$s， %2$s</string>
   <string name="icon_pack_preference_title">图标包</string>
@@ -277,7 +277,7 @@
   <string name="full_width_width_widgets_pref_title">全宽微件</string>
   <string name="full_width_widgets_pref_summary">允许微件填充整个桌面宽度</string>
   <string name="notification_access_pref_title">通知角标与预览</string>
-  <string name="notification_access_pref_summary">允许 Lawnchair 访问您的通知以启用此功能</string>
+  <string name="notification_access_pref_summary">允许 Lawnsearch 访问您的通知以启用此功能</string>
   <string name="general_pref_title">常规</string>
   <string name="dock_pref_title">Dock</string>
   <string name="app_drawer_pref_title">应用抽屉</string>
@@ -290,7 +290,7 @@
   <string name="app_drawer_pref_summary">定制您的应用抽屉</string>
   <string name="pixel_ui_pref_summary">启用 Pixel Launcher 独家功能</string>
   <string name="backup_pref_title">备份</string>
-  <string name="behavior_pref_summary">更改 Lawnchair 行为</string>
+  <string name="behavior_pref_summary">更改 Lawnsearch 行为</string>
   <string name="backup_pref_summary">备份您的数据库和配置</string>
   <string name="debug_pref_summary">重启或重建图标缓存</string>
   <string name="show_pixel_bar_pref_title">显示 Pixel 顶栏</string>
@@ -300,7 +300,7 @@
   <string name="pixel_style_icons_pref_title">使用 Pixel 图标</string>
   <string name="pixel_style_icons_pref_summary">该项启用时会优先选择圆形图标</string>
   <string name="show_google_now_tab_pref_title">显示 Google Now 页面</string>
-  <string name="restart_lawnchair_pref_title">重启 Lawnchair</string>
+  <string name="restart_lawnchair_pref_title">重启 Lawnsearch</string>
   <string name="restart_lawnchair_pref_summary">当设置出错时可能会有用</string>
   <string name="rebuild_icondb_pref_title">重建图标缓存</string>
   <string name="pinch_to_overview_pref_title">双指捏合打开概览页面</string>
@@ -320,8 +320,8 @@
   <string name="import_db_title">导入数据库</string>
   <string name="export_prefs_title">导出配置</string>
   <string name="import_prefs_title">导入配置</string>
-  <string name="notification_listener_label">Lawnchair - 通知角标</string>
-  <string name="color_extraction_label">Lawnchair - 提取颜色</string>
+  <string name="notification_listener_label">Lawnsearch - 通知角标</string>
+  <string name="color_extraction_label">Lawnsearch - 提取颜色</string>
   <string name="test_title">测试</string>
   <string name="visibility">可见性</string>
   <string name="default_text">默认</string>

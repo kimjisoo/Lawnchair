@@ -243,10 +243,10 @@
   <string name="shortcuts_menu_with_notifications_description">%1$d atalhos e notificações de %2$d para %3$s</string>
   <string name="notifications_header">Notificações</string>
   <string name="widgets_bottom_sheet_title">%1$s widgets</string>
-  <!-- About Lawnchair -->
-  <string name="about_text">Lawnchair is a Launcher app created by Till Kottmann (aka deletescape). It\'s based on Launcher3 from AOSP.</string>
+  <!-- About Lawnsearch -->
+  <string name="about_text">Lawnsearch is a Launcher app created by Till Kottmann (aka deletescape). It\'s based on Launcher3 from AOSP.</string>
   <string name="about_title">Sobre</string>
-  <string name="about_pref_summary">Conheça a equipe da Lawnchair</string>
+  <string name="about_pref_summary">Conheça a equipe da Lawnsearch</string>
   <string name="changelog_title">Alterações para a versão #%d</string>
   <string name="week_day_format">%1$s, %2$s</string>
   <string name="icon_pack_preference_title">Pacote de Ícones</string>
@@ -278,7 +278,7 @@
   <string name="full_width_width_widgets_pref_title">Preencher widgets na horizontal</string>
   <string name="full_width_widgets_pref_summary">Permitir que os widgets abranger a largura inteira sem preenchimento</string>
   <string name="notification_access_pref_title">Visualização e emblemas de notificação</string>
-  <string name="notification_access_pref_summary">Allow Lawnchair to access your notification to enable this features</string>
+  <string name="notification_access_pref_summary">Allow Lawnsearch to access your notification to enable this features</string>
   <string name="general_pref_title">Geral</string>
   <string name="dock_pref_title">Barra de aplicativos</string>
   <string name="app_drawer_pref_title">Gaveta de aplicativos</string>
@@ -291,7 +291,7 @@
   <string name="app_drawer_pref_summary">Personalizar sua gaveta de aplicativos</string>
   <string name="pixel_ui_pref_summary">Habilitar funções exclusivas do Pixel Launcher</string>
   <string name="backup_pref_title">Backup</string>
-  <string name="behavior_pref_summary">Mudar o comportamento do Lawnchair</string>
+  <string name="behavior_pref_summary">Mudar o comportamento do Lawnsearch</string>
   <string name="backup_pref_summary">Fazer backup dos seus dados e configurações</string>
   <string name="debug_pref_summary">Reiniciar ou refazer dados dos ícones</string>
   <string name="show_pixel_bar_pref_title">Mostrar a barra superior do Pixel</string>
@@ -301,7 +301,7 @@
   <string name="pixel_style_icons_pref_title">Usar ícones Pixel</string>
   <string name="pixel_style_icons_pref_summary">Quando habilitados, ícones circulares serão usados quando possível</string>
   <string name="show_google_now_tab_pref_title">Mostrar página do Google Now</string>
-  <string name="restart_lawnchair_pref_title">Reiniciar o Lawnchair</string>
+  <string name="restart_lawnchair_pref_title">Reiniciar o Lawnsearch</string>
   <string name="restart_lawnchair_pref_summary">Pode ser útil se algumas configurações não forem aplicadas corretamente</string>
   <string name="rebuild_icondb_pref_title">Reconstruir o banco de dados dos ícones</string>
   <string name="pinch_to_overview_pref_title">Pince para visão geral</string>
@@ -321,8 +321,8 @@
   <string name="import_db_title">Import database</string>
   <string name="export_prefs_title">Export settings</string>
   <string name="import_prefs_title">Import settings</string>
-  <string name="notification_listener_label">Lawnchair - Notificações dinâmicas</string>
-  <string name="color_extraction_label">Lawnchair - Extração de cor</string>
+  <string name="notification_listener_label">Lawnsearch - Notificações dinâmicas</string>
+  <string name="color_extraction_label">Lawnsearch - Extração de cor</string>
   <string name="test_title">Teste</string>
   <string name="visibility">Visibilidade</string>
   <string name="default_text">Padrão</string>

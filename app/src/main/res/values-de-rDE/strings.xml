@@ -243,10 +243,10 @@
   <string name="shortcuts_menu_with_notifications_description">%1$d Verknüpfungen und %2$d Benachrichtigungen für %3$s</string>
   <string name="notifications_header">Benachrichtigungen</string>
   <string name="widgets_bottom_sheet_title">%1$s Widgets</string>
-  <!-- About Lawnchair -->
-  <string name="about_text">Lawnchair ist ein Launcher erstellt von Till Kottmann (aka deletescape). Er basiert auf Launcher3 von AOSP.</string>
+  <!-- About Lawnsearch -->
+  <string name="about_text">Lawnsearch ist ein Launcher erstellt von Till Kottmann (aka deletescape). Er basiert auf Launcher3 von AOSP.</string>
   <string name="about_title">Über</string>
-  <string name="about_pref_summary">Lerne das Lawnchair-Team kennen</string>
+  <string name="about_pref_summary">Lerne das Lawnsearch-Team kennen</string>
   <string name="changelog_title">Changelog für Build #%d</string>
   <string name="week_day_format">%1$s, %2$s</string>
   <string name="icon_pack_preference_title">Iconpack</string>
@@ -278,7 +278,7 @@
   <string name="full_width_width_widgets_pref_title">Widgets mit voller Breite</string>
   <string name="full_width_widgets_pref_summary">Widgets erlauben auf die volle Breite vergrößert zu werden</string>
   <string name="notification_access_pref_title">Benachrichtigungsanzeige und -vorschau</string>
-  <string name="notification_access_pref_summary">Für diese Funktion benötigt Lawnchair Zugriff auf Benachrichtigungen</string>
+  <string name="notification_access_pref_summary">Für diese Funktion benötigt Lawnsearch Zugriff auf Benachrichtigungen</string>
   <string name="general_pref_title">Startbildschirm</string>
   <string name="dock_pref_title">Dock</string>
   <string name="app_drawer_pref_title">App-Liste</string>
@@ -291,7 +291,7 @@
   <string name="app_drawer_pref_summary">Personalisiere deine App-Liste</string>
   <string name="pixel_ui_pref_summary">Passe das Design diverser Elemente an</string>
   <string name="backup_pref_title">Sicherung</string>
-  <string name="behavior_pref_summary">Ändere das Verhalten von Lawnchair</string>
+  <string name="behavior_pref_summary">Ändere das Verhalten von Lawnsearch</string>
   <string name="backup_pref_summary">Sichere deine Datenbank und die Einstellungen</string>
   <string name="debug_pref_summary">Starte oder bilde die Icon-Datenbank neu</string>
   <string name="show_pixel_bar_pref_title">Pixel-Leiste (oben) anzeigen</string>
@@ -301,7 +301,7 @@
   <string name="pixel_style_icons_pref_title">Pixel-Icons verwenden</string>
   <string name="pixel_style_icons_pref_summary">Wenn möglich runde Icons verwenden</string>
   <string name="show_google_now_tab_pref_title">Google Now-Seite anzeigen</string>
-  <string name="restart_lawnchair_pref_title">Lawnchair neu starten</string>
+  <string name="restart_lawnchair_pref_title">Lawnsearch neu starten</string>
   <string name="restart_lawnchair_pref_summary">Hilfreich, wenn Einstellungen nicht korrekt angewendet wurden</string>
   <string name="rebuild_icondb_pref_title">Icon-Datenbank neu generieren</string>
   <string name="pinch_to_overview_pref_title">Zoomgeste für Übersicht</string>
@@ -321,8 +321,8 @@
   <string name="import_db_title">Datenbank</string>
   <string name="export_prefs_title">Einstellungen</string>
   <string name="import_prefs_title">Einstellungen</string>
-  <string name="notification_listener_label">Lawnchair-Benachrichtigungsplaketten</string>
-  <string name="color_extraction_label">Lawnchair-Farbextraktion</string>
+  <string name="notification_listener_label">Lawnsearch-Benachrichtigungsplaketten</string>
+  <string name="color_extraction_label">Lawnsearch-Farbextraktion</string>
   <string name="test_title">Test</string>
   <string name="visibility">Sichtbarkeit</string>
   <string name="default_text">Standard</string>

@@ -243,8 +243,8 @@
   <string name="shortcuts_menu_with_notifications_description">%1$d snarveier og %2$d varsler for %3$s</string>
   <string name="notifications_header">Varsler</string>
   <string name="widgets_bottom_sheet_title">%1$s moduler</string>
-  <!-- About Lawnchair -->
-  <string name="about_text">Lawnchair er en startside-app laget av Till Kottmann (aka deletescape). Den er basert på Launcher3 fra AOSP.</string>
+  <!-- About Lawnsearch -->
+  <string name="about_text">Lawnsearch er en startside-app laget av Till Kottmann (aka deletescape). Den er basert på Launcher3 fra AOSP.</string>
   <string name="about_title">Om</string>
   <string name="changelog_title">Endringslogg for versjon #%d</string>
   <string name="week_day_format">%1$s, %2$s</string>
@@ -277,12 +277,12 @@
   <string name="full_width_width_widgets_pref_title">Full bredde på moduler</string>
   <string name="full_width_widgets_pref_summary">Tillat moduler å spenne hele bredden uten padding</string>
   <string name="notification_access_pref_title">Varsling-merker og forhåndsvisning</string>
-  <string name="notification_access_pref_summary">Gi Lawnchair tilgang til varslingene dine for å aktivere denne funksjonen</string>
+  <string name="notification_access_pref_summary">Gi Lawnsearch tilgang til varslingene dine for å aktivere denne funksjonen</string>
   <string name="behavior_pref_title">Oppførsel</string>
   <string name="debug_pref_title">Feilsøk</string>
   <string name="import_export_pref_title">Importér/eksportér</string>
   <string name="backup_pref_title">Sikkerhetskopiering</string>
-  <string name="behavior_pref_summary">Endre Lawnchair</string>
+  <string name="behavior_pref_summary">Endre Lawnsearch</string>
   <string name="backup_pref_summary">Sikkerhetskopiere databasen og innstillinger</string>
   <string name="debug_pref_summary">Hvile eller bygge ikonet database</string>
   <string name="show_pixel_bar_pref_title">Vis Pixel-topplinje</string>
@@ -292,7 +292,7 @@
   <string name="pixel_style_icons_pref_title">Bruk Pixel-ikoner</string>
   <string name="pixel_style_icons_pref_summary">Når aktivert, brukes runde ikoner hvor det er mulig</string>
   <string name="show_google_now_tab_pref_title">Vis Google Nå-siden</string>
-  <string name="restart_lawnchair_pref_title">Start Lawnchair på nytt</string>
+  <string name="restart_lawnchair_pref_title">Start Lawnsearch på nytt</string>
   <string name="restart_lawnchair_pref_summary">Kan være nyttig dersom noen innstillinger ikke settes riktig</string>
   <string name="rebuild_icondb_pref_title">Gjenoppbygg ikon-database</string>
   <string name="pinch_to_overview_pref_title">Knip for oversikt</string>
@@ -312,8 +312,8 @@
   <string name="import_db_title">Import database</string>
   <string name="export_prefs_title">Export settings</string>
   <string name="import_prefs_title">Import settings</string>
-  <string name="notification_listener_label">Lawnchair - varslingmerker</string>
-  <string name="color_extraction_label">Lawnchair - fargeuthenting</string>
+  <string name="notification_listener_label">Lawnsearch - varslingmerker</string>
+  <string name="color_extraction_label">Lawnsearch - fargeuthenting</string>
   <string name="test_title">Test</string>
   <string name="visibility">Synlighet</string>
   <string name="default_text">Standard</string>

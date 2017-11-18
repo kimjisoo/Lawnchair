@@ -243,10 +243,10 @@
   <string name="shortcuts_menu_with_notifications_description">%1$d accesos directos y %2$d notificaciones para %3$s</string>
   <string name="notifications_header">Notificaciones</string>
   <string name="widgets_bottom_sheet_title">Widgets de %1$s</string>
-  <!-- About Lawnchair -->
-  <string name="about_text">Lawnchair es un Launcher creado por Till Kottmann (alias deletescape). Basado en Launcher3 de AOSP.</string>
+  <!-- About Lawnsearch -->
+  <string name="about_text">Lawnsearch es un Launcher creado por Till Kottmann (alias deletescape). Basado en Launcher3 de AOSP.</string>
   <string name="about_title">Acerca de</string>
-  <string name="about_pref_summary">Conoce acerca del equipo de Lawnchair</string>
+  <string name="about_pref_summary">Conoce acerca del equipo de Lawnsearch</string>
   <string name="changelog_title">Registro de cambios de la build #%d</string>
   <string name="week_day_format">%1$s, %2$s</string>
   <string name="icon_pack_preference_title">Paquete de iconos</string>
@@ -278,7 +278,7 @@
   <string name="full_width_width_widgets_pref_title">Widgets de ancho completo</string>
   <string name="full_width_widgets_pref_summary">Permitir a los widgets mostrarse sobre el ancho completo</string>
   <string name="notification_access_pref_title">Insignia en notificaciones y vista previa</string>
-  <string name="notification_access_pref_summary">Deberá permitir a Lawnchair el acceso a notificaciones para poder habilitar esta función</string>
+  <string name="notification_access_pref_summary">Deberá permitir a Lawnsearch el acceso a notificaciones para poder habilitar esta función</string>
   <string name="general_pref_title">General</string>
   <string name="dock_pref_title">Barra de íconos</string>
   <string name="app_drawer_pref_title">Cajón de Aplicaciones</string>
@@ -291,7 +291,7 @@
   <string name="app_drawer_pref_summary">Personaliza tu cajón de aplicaciones</string>
   <string name="pixel_ui_pref_summary">Habilitar características exclusivas de lanzador de Pixel</string>
   <string name="backup_pref_title">Copia de seguridad</string>
-  <string name="behavior_pref_summary">Cambiar el comportamiento de Lawnchair</string>
+  <string name="behavior_pref_summary">Cambiar el comportamiento de Lawnsearch</string>
   <string name="backup_pref_summary">Copia de seguridad de su base de datos y ajustes</string>
   <string name="debug_pref_summary">Reiniciar o reconstruir la base de datos de iconos</string>
   <string name="show_pixel_bar_pref_title">Mostrar la barra superior al estilo Pixel</string>
@@ -301,7 +301,7 @@
   <string name="pixel_style_icons_pref_title">Usar iconos al estilo Pixel</string>
   <string name="pixel_style_icons_pref_summary">Si esta opción está habilitada, se utilizarán iconos circulares siempre que sea posible</string>
   <string name="show_google_now_tab_pref_title">Mostrar página de Google Now</string>
-  <string name="restart_lawnchair_pref_title">Reiniciar Lawnchair</string>
+  <string name="restart_lawnchair_pref_title">Reiniciar Lawnsearch</string>
   <string name="restart_lawnchair_pref_summary">Puede ser útil si algunos ajustes no se aplican correctamente</string>
   <string name="rebuild_icondb_pref_title">Reconstruir la base de datos de iconos</string>
   <string name="pinch_to_overview_pref_title">Pellizcar para vista general</string>
@@ -321,8 +321,8 @@
   <string name="import_db_title">Importar base de datos</string>
   <string name="export_prefs_title">Exportar configuración</string>
   <string name="import_prefs_title">Importar configuración</string>
-  <string name="notification_listener_label">Lawnchair - Insignia en notificaciones</string>
-  <string name="color_extraction_label">Lawnchair - Extracción de colores</string>
+  <string name="notification_listener_label">Lawnsearch - Insignia en notificaciones</string>
+  <string name="color_extraction_label">Lawnsearch - Extracción de colores</string>
   <string name="test_title">Prueba</string>
   <string name="visibility">Visibilidad</string>
   <string name="default_text">Por defecto</string>

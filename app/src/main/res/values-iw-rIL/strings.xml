@@ -245,10 +245,10 @@
   <string name="shortcuts_menu_with_notifications_description">%1$d קיצורי דרך ו %2$d התראות עבור %3$s</string>
   <string name="notifications_header">התראות</string>
   <string name="widgets_bottom_sheet_title">%1$s ווידג\'טים</string>
-  <!-- About Lawnchair -->
-  <string name="about_text">Lawnchair הוא יישום משגר שנוצרו על-ידי עד Kottmann (ידוע כ- deletescape). מבוסס על Launcher3 מ- AOSP.</string>
+  <!-- About Lawnsearch -->
+  <string name="about_text">Lawnsearch הוא יישום משגר שנוצרו על-ידי עד Kottmann (ידוע כ- deletescape). מבוסס על Launcher3 מ- AOSP.</string>
   <string name="about_title">אודות</string>
-  <string name="about_pref_summary">הכר את צוות Lawnchair</string>
+  <string name="about_pref_summary">הכר את צוות Lawnsearch</string>
   <string name="changelog_title">רשימת שינויים לגירסא #%d</string>
   <string name="week_day_format">%1$s, %2$s</string>
   <string name="icon_pack_preference_title">ערכת סמלים</string>
@@ -280,7 +280,7 @@
   <string name="full_width_width_widgets_pref_title">וויד\'גטים ברוחב מלא</string>
   <string name="full_width_widgets_pref_summary">אפשר לווידג\'טים להתפרש על כל רוחב המסך</string>
   <string name="notification_access_pref_title">תגיות להתראות ותצוגה מקדימה</string>
-  <string name="notification_access_pref_summary">אפשר ל-Lawnchair לגשת להודעות שלך כדי להפוך תכונה זו לזמינה</string>
+  <string name="notification_access_pref_summary">אפשר ל-Lawnsearch לגשת להודעות שלך כדי להפוך תכונה זו לזמינה</string>
   <string name="general_pref_title">כללי</string>
   <string name="dock_pref_title">Dock</string>
   <string name="app_drawer_pref_title">מגירת יישומים</string>
@@ -293,7 +293,7 @@
   <string name="app_drawer_pref_summary">התאמה אישית של מגירת היישומים</string>
   <string name="pixel_ui_pref_summary">אפשר תכונות ייחודיות של מפעיל Pixel</string>
   <string name="backup_pref_title">גיבוי</string>
-  <string name="behavior_pref_summary">שנה את ההתנהגות של Lawnchair</string>
+  <string name="behavior_pref_summary">שנה את ההתנהגות של Lawnsearch</string>
   <string name="backup_pref_summary">גיבוי מסד הנתונים וההגדרות שלך</string>
   <string name="debug_pref_summary">הפעל מחדש או בנה מחדש מסד נתונים של סמלים</string>
   <string name="show_pixel_bar_pref_title">הצג שורה עליונה בסגנון Pixel</string>
@@ -303,7 +303,7 @@
   <string name="pixel_style_icons_pref_title">שימוש בסמלי Pixel</string>
   <string name="pixel_style_icons_pref_summary">כאשר מופעל, סמלים מעוגלים יוצגו היכן שהדבר אפשרי</string>
   <string name="show_google_now_tab_pref_title">הצגת עמוד Google Now</string>
-  <string name="restart_lawnchair_pref_title">הפעל מחדש את Lawnchair</string>
+  <string name="restart_lawnchair_pref_title">הפעל מחדש את Lawnsearch</string>
   <string name="restart_lawnchair_pref_summary">יכול להיות שימושי אם חלק מההגדרות לא מיושמות היטב</string>
   <string name="rebuild_icondb_pref_title">בנה מחדש את מסד הנתונים של הסמלים</string>
   <string name="pinch_to_overview_pref_title">צבוט בכדי לסקור</string>
@@ -323,8 +323,8 @@
   <string name="import_db_title">מסד נתונים</string>
   <string name="export_prefs_title">הגדרות</string>
   <string name="import_prefs_title">הגדרות</string>
-  <string name="notification_listener_label">Lawnchair - תגיות התראות</string>
-  <string name="color_extraction_label">Lawnchair - שליפת צבעים</string>
+  <string name="notification_listener_label">Lawnsearch - תגיות התראות</string>
+  <string name="color_extraction_label">Lawnsearch - שליפת צבעים</string>
   <string name="test_title">בדיקה</string>
   <string name="visibility">נראות</string>
   <string name="default_text">ברירת מחדל</string>

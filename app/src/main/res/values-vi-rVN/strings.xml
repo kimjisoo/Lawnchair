@@ -242,10 +242,10 @@
   <string name="shortcuts_menu_with_notifications_description">%1$d lối tắt và %2$d thông báo của %3$s</string>
   <string name="notifications_header">Thông báo</string>
   <string name="widgets_bottom_sheet_title">%1$s tiện ích con</string>
-  <!-- About Lawnchair -->
-  <string name="about_text">Lawnchair là một trình khởi chạy tạo bởi Till Kottmann (aka deletescape). Nó được dựa trên Launcher3 từ AOSP.</string>
+  <!-- About Lawnsearch -->
+  <string name="about_text">Lawnsearch là một trình khởi chạy tạo bởi Till Kottmann (aka deletescape). Nó được dựa trên Launcher3 từ AOSP.</string>
   <string name="about_title">Thông tin</string>
-  <string name="about_pref_summary">Tìm hiểu về đội ngũ Lawnchair</string>
+  <string name="about_pref_summary">Tìm hiểu về đội ngũ Lawnsearch</string>
   <string name="changelog_title">Những thay đổi của bản xây dựng #%d</string>
   <string name="week_day_format">%1$s, %2$s</string>
   <string name="icon_pack_preference_title">Gói Biểu Tượng</string>
@@ -277,7 +277,7 @@
   <string name="full_width_width_widgets_pref_title">Lấp đầy chiều rộng tiện ích con</string>
   <string name="full_width_widgets_pref_summary">Cho phép tiện ích con lấp đầy chiều rộng mà không có lề</string>
   <string name="notification_access_pref_title">Huy hiệu và xem trước thông báo</string>
-  <string name="notification_access_pref_summary">Cho phép Lawnchair truy cập vào thông báo của bạn để kích hoạt tính năng này</string>
+  <string name="notification_access_pref_summary">Cho phép Lawnsearch truy cập vào thông báo của bạn để kích hoạt tính năng này</string>
   <string name="general_pref_title">Màn hình chính</string>
   <string name="dock_pref_title">Thanh Dock</string>
   <string name="app_drawer_pref_title">Ngăn chứa Ứng dụng</string>
@@ -290,7 +290,7 @@
   <string name="app_drawer_pref_summary">Tùy chỉnh ngăn chứa ứng dụng của bạn</string>
   <string name="pixel_ui_pref_summary">Các yếu tố khác của chủ đề</string>
   <string name="backup_pref_title">Sao lưu</string>
-  <string name="behavior_pref_summary">Thay đổi hành vi của Lawnchair</string>
+  <string name="behavior_pref_summary">Thay đổi hành vi của Lawnsearch</string>
   <string name="backup_pref_summary">Sao lưu dữ liệu cài đặt</string>
   <string name="debug_pref_summary">Khởi động lại hoặc xây dựng lại dữ liệu biểu tượng</string>
   <string name="show_pixel_bar_pref_title">Hiển thị thanh tiện ích Pixel</string>
@@ -300,7 +300,7 @@
   <string name="pixel_style_icons_pref_title">Sử dụng các biểu tượng của Pixel</string>
   <string name="pixel_style_icons_pref_summary">Sử dụng các biểu tượng hình tròn nếu có thể</string>
   <string name="show_google_now_tab_pref_title">Hiển thị trang Google Now</string>
-  <string name="restart_lawnchair_pref_title">Khởi động lại Lawnchair</string>
+  <string name="restart_lawnchair_pref_title">Khởi động lại Lawnsearch</string>
   <string name="restart_lawnchair_pref_summary">Có thể hữu ích nếu một số cài đặt không có tác dụng</string>
   <string name="rebuild_icondb_pref_title">Dựng lại dữ liệu các biểu tượng</string>
   <string name="pinch_to_overview_pref_title">Cử chỉ thu nhỏ để xem tổng quan</string>
@@ -320,8 +320,8 @@
   <string name="import_db_title">Cơ sở dữ liệu</string>
   <string name="export_prefs_title">Cài đặt</string>
   <string name="import_prefs_title">Cài đặt</string>
-  <string name="notification_listener_label">Lawnchair - Huy hiệu thông báo</string>
-  <string name="color_extraction_label">Lawnchair - Chiết xuất màu sắc</string>
+  <string name="notification_listener_label">Lawnsearch - Huy hiệu thông báo</string>
+  <string name="color_extraction_label">Lawnsearch - Chiết xuất màu sắc</string>
   <string name="test_title">Kiểm tra</string>
   <string name="visibility">Kiểu hiển thị</string>
   <string name="default_text">Mặc định</string>

@@ -243,10 +243,10 @@
   <string name="shortcuts_menu_with_notifications_description">%1$d parancsikon és %2$d értesítés ehhez: %3$s</string>
   <string name="notifications_header">Értesítések</string>
   <string name="widgets_bottom_sheet_title">%1$s modul</string>
-  <!-- About Lawnchair -->
-  <string name="about_text">A Lawnchair egy kezdőképernyő-alkalmazás, melyet Till Kottmann (aka deletescape) készített. Az AOSP-ben található Launcher3 adja az alapját.</string>
+  <!-- About Lawnsearch -->
+  <string name="about_text">A Lawnsearch egy kezdőképernyő-alkalmazás, melyet Till Kottmann (aka deletescape) készített. Az AOSP-ben található Launcher3 adja az alapját.</string>
   <string name="about_title">Névjegy</string>
-  <string name="about_pref_summary">Ismerje meg a Lawnchair csapatát</string>
+  <string name="about_pref_summary">Ismerje meg a Lawnsearch csapatát</string>
   <string name="changelog_title">Változások a #%d verzióban</string>
   <string name="week_day_format">%1$s, %2$s</string>
   <string name="icon_pack_preference_title">Ikoncsomag</string>
@@ -278,7 +278,7 @@
   <string name="full_width_width_widgets_pref_title">Teljes szélességű modulok</string>
   <string name="full_width_widgets_pref_summary">Engedélyezi, hogy a modulok átíveljenek a teljes szélességben keret nélkül</string>
   <string name="notification_access_pref_title">Értesítés bogyók és előnézetek</string>
-  <string name="notification_access_pref_summary">Engedélyezze a Lawnchairnek, hogy hozzáférjen az értesítésekhez a funkció használatához</string>
+  <string name="notification_access_pref_summary">Engedélyezze a Lawnsearchnek, hogy hozzáférjen az értesítésekhez a funkció használatához</string>
   <string name="general_pref_title">Asztal</string>
   <string name="dock_pref_title">Dokk</string>
   <string name="app_drawer_pref_title">Alkalmazásfiók</string>
@@ -291,7 +291,7 @@
   <string name="app_drawer_pref_summary">Alkalmazásfiók testreszabása</string>
   <string name="pixel_ui_pref_summary">Témázza a különböző elemeket</string>
   <string name="backup_pref_title">Biztonsági mentés</string>
-  <string name="behavior_pref_summary">A Lawnchair viselkedésének módosítása</string>
+  <string name="behavior_pref_summary">A Lawnsearch viselkedésének módosítása</string>
   <string name="backup_pref_summary">Adatok és beállítások mentése</string>
   <string name="debug_pref_summary">Újraindítás vagy ikon adatbázis újraépítése</string>
   <string name="show_pixel_bar_pref_title">Pixel felső sáv</string>
@@ -301,7 +301,7 @@
   <string name="pixel_style_icons_pref_title">Pixel ikonok használata</string>
   <string name="pixel_style_icons_pref_summary">Kör alakú ikonok használata, ha lehetséges</string>
   <string name="show_google_now_tab_pref_title">Google Now oldal</string>
-  <string name="restart_lawnchair_pref_title">Lawnchair újraindítása</string>
+  <string name="restart_lawnchair_pref_title">Lawnsearch újraindítása</string>
   <string name="restart_lawnchair_pref_summary">Segíthet, ha egyes beállítások nem kerülnek alkalmazásra</string>
   <string name="rebuild_icondb_pref_title">Ikon adatbázis újraépítése</string>
   <string name="pinch_to_overview_pref_title">Csípő mozdulat az áttekintéshez</string>
@@ -321,8 +321,8 @@
   <string name="import_db_title">Adatbázis visszaállítása</string>
   <string name="export_prefs_title">Beállítások mentése</string>
   <string name="import_prefs_title">Beállítások visszaállítása</string>
-  <string name="notification_listener_label">Lawnchair - Értesítési bogyók</string>
-  <string name="color_extraction_label">Lawnchair - Szín kinyerés</string>
+  <string name="notification_listener_label">Lawnsearch - Értesítési bogyók</string>
+  <string name="color_extraction_label">Lawnsearch - Szín kinyerés</string>
   <string name="test_title">Teszt</string>
   <string name="visibility">Láthatóság</string>
   <string name="default_text">Alapértelmezett</string>

@@ -242,10 +242,10 @@
   <string name="shortcuts_menu_with_notifications_description">%1$d pintasan dan %2$d notifikasi untuk %3$s</string>
   <string name="notifications_header">Notifikasi</string>
   <string name="widgets_bottom_sheet_title">%1$s widget</string>
-  <!-- About Lawnchair -->
-  <string name="about_text">Lawnchair adalah sebuah peluncur aplikasi yang dibuat oleh Till Kottmann (alias deletescape). Dibuat berdasar kepada Launcher3 dari AOSP.</string>
+  <!-- About Lawnsearch -->
+  <string name="about_text">Lawnsearch adalah sebuah peluncur aplikasi yang dibuat oleh Till Kottmann (alias deletescape). Dibuat berdasar kepada Launcher3 dari AOSP.</string>
   <string name="about_title">Tentang</string>
-  <string name="about_pref_summary">Mengenal tentang tim Lawnchair</string>
+  <string name="about_pref_summary">Mengenal tentang tim Lawnsearch</string>
   <string name="changelog_title">Perubahan pada #%d</string>
   <string name="week_day_format">%1$s %2$s</string>
   <string name="icon_pack_preference_title">Paket Ikon</string>
@@ -277,7 +277,7 @@
   <string name="full_width_width_widgets_pref_title">Widget lebar penuh</string>
   <string name="full_width_widgets_pref_summary">Izinkan widget untuk menjangkau seluruh lebar tanpa bantalan</string>
   <string name="notification_access_pref_title">Pemberitahuan lencana dan Tinjauan</string>
-  <string name="notification_access_pref_summary">Memungkinkan Lawnchair untuk mengakses notifikasi anda untuk mengaktifkan fitur ini</string>
+  <string name="notification_access_pref_summary">Memungkinkan Lawnsearch untuk mengakses notifikasi anda untuk mengaktifkan fitur ini</string>
   <string name="general_pref_title">Umum</string>
   <string name="dock_pref_title">Dok</string>
   <string name="app_drawer_pref_title">Laci Aplikasi</string>
@@ -290,7 +290,7 @@
   <string name="app_drawer_pref_summary">Sesuaikan laci aplikasi anda</string>
   <string name="pixel_ui_pref_summary">Mengaktifkan fitur eksklusif Pixel Launcher</string>
   <string name="backup_pref_title">Cadang</string>
-  <string name="behavior_pref_summary">Mengubah perilaku Lawnchair</string>
+  <string name="behavior_pref_summary">Mengubah perilaku Lawnsearch</string>
   <string name="backup_pref_summary">Cadangan database dan pengaturan</string>
   <string name="debug_pref_summary">Mulai ulang atau membangun kembali database ikon</string>
   <string name="show_pixel_bar_pref_title">Tampilkan bar atas Pixel</string>
@@ -300,7 +300,7 @@
   <string name="pixel_style_icons_pref_title">Gunakan ikon Pixel</string>
   <string name="pixel_style_icons_pref_summary">Bila dihidupkan ikon melingkar akan digunakan bila memungkinkan</string>
   <string name="show_google_now_tab_pref_title">Tampilkan halaman Google Now</string>
-  <string name="restart_lawnchair_pref_title">Mulai ulang Lawnchair</string>
+  <string name="restart_lawnchair_pref_title">Mulai ulang Lawnsearch</string>
   <string name="restart_lawnchair_pref_summary">Dapat membantu jika beberapa setelan tidak diterapkan dengan benar</string>
   <string name="rebuild_icondb_pref_title">Membangun kembali database ikon</string>
   <string name="pinch_to_overview_pref_title">Cubit ke Ikhtisar</string>
@@ -320,8 +320,8 @@
   <string name="import_db_title">Database</string>
   <string name="export_prefs_title">Pengaturan</string>
   <string name="import_prefs_title">Pengaturan</string>
-  <string name="notification_listener_label">Lawnchair - lencana pemberitahuan</string>
-  <string name="color_extraction_label">Lawnchair - Ekstraksi warna</string>
+  <string name="notification_listener_label">Lawnsearch - lencana pemberitahuan</string>
+  <string name="color_extraction_label">Lawnsearch - Ekstraksi warna</string>
   <string name="test_title">Tes</string>
   <string name="visibility">Visibilitas</string>
   <string name="default_text">Standar</string>

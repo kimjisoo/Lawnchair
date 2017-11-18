@@ -243,10 +243,10 @@
   <string name="shortcuts_menu_with_notifications_description">%1$d snelkoppelingen en %2$d notificaties voor %3$s</string>
   <string name="notifications_header">Notificaties</string>
   <string name="widgets_bottom_sheet_title">%1$s widgets</string>
-  <!-- About Lawnchair -->
-  <string name="about_text">Lawnchair is een Launcher-app gemaakt door Till Kottmann (bekend als deletescape). Het is gebaseerd op Launcher3 uit AOSP.</string>
+  <!-- About Lawnsearch -->
+  <string name="about_text">Lawnsearch is een Launcher-app gemaakt door Till Kottmann (bekend als deletescape). Het is gebaseerd op Launcher3 uit AOSP.</string>
   <string name="about_title">Over</string>
-  <string name="about_pref_summary">Leer het Lawnchair-team kennen</string>
+  <string name="about_pref_summary">Leer het Lawnsearch-team kennen</string>
   <string name="changelog_title">Changelog voor build #%d</string>
   <string name="week_day_format">%1$s, %2$s</string>
   <string name="icon_pack_preference_title">Pictogrammenpakket</string>
@@ -278,7 +278,7 @@
   <string name="full_width_width_widgets_pref_title">Volledige breedte widgets</string>
   <string name="full_width_widgets_pref_summary">Widgets toestaan de volledige breedte te omvatten</string>
   <string name="notification_access_pref_title">Notificatie pictogram en voorvertoning</string>
-  <string name="notification_access_pref_summary">Geef Lawnchair toestemming tot uw notificaties om deze functie in te schakelen</string>
+  <string name="notification_access_pref_summary">Geef Lawnsearch toestemming tot uw notificaties om deze functie in te schakelen</string>
   <string name="general_pref_title">Algemeen</string>
   <string name="dock_pref_title">Dock</string>
   <string name="app_drawer_pref_title">App drawer</string>
@@ -291,7 +291,7 @@
   <string name="app_drawer_pref_summary">Pas je app drawer aan</string>
   <string name="pixel_ui_pref_summary">Pixel Launcher exclusieve functies inschakelen</string>
   <string name="backup_pref_title">Back-up</string>
-  <string name="behavior_pref_summary">Wijzig het gedrag van Lawnchair</string>
+  <string name="behavior_pref_summary">Wijzig het gedrag van Lawnsearch</string>
   <string name="backup_pref_summary">Uw data en instellingen back-uppen</string>
   <string name="debug_pref_summary">Herstarten of pictogrammendata herbouwen</string>
   <string name="show_pixel_bar_pref_title">Bovenste Pixel balk tonen</string>
@@ -301,7 +301,7 @@
   <string name="pixel_style_icons_pref_title">Gebruik Pixel pictogrammen</string>
   <string name="pixel_style_icons_pref_summary">Wanneer ingeschakeld zullen ronde pictogrammen worden gebruikt waar mogelijk</string>
   <string name="show_google_now_tab_pref_title">Google Now pagina weergeven</string>
-  <string name="restart_lawnchair_pref_title">Lawnchair herstarten</string>
+  <string name="restart_lawnchair_pref_title">Lawnsearch herstarten</string>
   <string name="restart_lawnchair_pref_summary">Kan nuttig zijn als sommige instellingen niet goed zijn toegepast</string>
   <string name="rebuild_icondb_pref_title">Pictogram database herbouwen</string>
   <string name="pinch_to_overview_pref_title">Knijpen om naar overzicht te gaan</string>
@@ -321,8 +321,8 @@
   <string name="import_db_title">Importeer database</string>
   <string name="export_prefs_title">Instellingen exporteren</string>
   <string name="import_prefs_title">Instellingen importeren</string>
-  <string name="notification_listener_label">Lawnchair - Notificatiepictogrammen</string>
-  <string name="color_extraction_label">Lawnchair - Kleurextractie</string>
+  <string name="notification_listener_label">Lawnsearch - Notificatiepictogrammen</string>
+  <string name="color_extraction_label">Lawnsearch - Kleurextractie</string>
   <string name="test_title">Test</string>
   <string name="visibility">Zichtbaar</string>
   <string name="default_text">Standaard</string>

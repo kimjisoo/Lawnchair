@@ -243,10 +243,10 @@
   <string name="shortcuts_menu_with_notifications_description">%3$s için %1$d kısayol ve %2$d bildirim</string>
   <string name="notifications_header">Bildirimler</string>
   <string name="widgets_bottom_sheet_title">%1$s widget</string>
-  <!-- About Lawnchair -->
-  <string name="about_text">Lawnchair, Till Kottmann (diğer adıyla deletescape) tarafından oluşturulan bir Başlatıcı uygulamasıdır. AOSP\'dan Launcher3\'e dayanıyor.</string>
+  <!-- About Lawnsearch -->
+  <string name="about_text">Lawnsearch, Till Kottmann (diğer adıyla deletescape) tarafından oluşturulan bir Başlatıcı uygulamasıdır. AOSP\'dan Launcher3\'e dayanıyor.</string>
   <string name="about_title">Hakkında</string>
-  <string name="about_pref_summary">Lawnchair ekibi hakkında bilgi sahibi olun</string>
+  <string name="about_pref_summary">Lawnsearch ekibi hakkında bilgi sahibi olun</string>
   <string name="changelog_title">Bu yapıdaki değişiklikler #%d</string>
   <string name="week_day_format">%1$s, %2$s</string>
   <string name="icon_pack_preference_title">Simge Paketi</string>
@@ -278,7 +278,7 @@
   <string name="full_width_width_widgets_pref_title">Widget\'lere tam genişlik</string>
   <string name="full_width_widgets_pref_summary">Widget\'ların dolgu olmadan tüm genişliğe yayılmasına izin ver</string>
   <string name="notification_access_pref_title">Bildirim rozetleri ve önizleme</string>
-  <string name="notification_access_pref_summary">Bu özellikleri etkinleştirmek için Lawnchair\'ın bildiriminize erişmesine izin verin</string>
+  <string name="notification_access_pref_summary">Bu özellikleri etkinleştirmek için Lawnsearch\'ın bildiriminize erişmesine izin verin</string>
   <string name="general_pref_title">Masaüstü</string>
   <string name="dock_pref_title">Alt Panel</string>
   <string name="app_drawer_pref_title">Uygulama Çekmecesi</string>
@@ -291,7 +291,7 @@
   <string name="app_drawer_pref_summary">Uygulama çekmecenizi özelleştirin</string>
   <string name="pixel_ui_pref_summary">Farklı parçaları temala</string>
   <string name="backup_pref_title">Yedekle</string>
-  <string name="behavior_pref_summary">Lawnchair davranışını değiştirme</string>
+  <string name="behavior_pref_summary">Lawnsearch davranışını değiştirme</string>
   <string name="backup_pref_summary">Veritabanınızı ve ayarlarınızı yedekleyin</string>
   <string name="debug_pref_summary">Simge veritabanını yeniden başlat veya yeniden oluştur</string>
   <string name="show_pixel_bar_pref_title">Pixel üst barını göster</string>
@@ -301,7 +301,7 @@
   <string name="pixel_style_icons_pref_title">Pixel simgeleri kullan</string>
   <string name="pixel_style_icons_pref_summary">Etkinleştirildiğinde, mümkün olduğunca dairesel simgeler kullanılacaktır</string>
   <string name="show_google_now_tab_pref_title">Google Now sayfasını göster</string>
-  <string name="restart_lawnchair_pref_title">Lawnchair Yeniden Başlat</string>
+  <string name="restart_lawnchair_pref_title">Lawnsearch Yeniden Başlat</string>
   <string name="restart_lawnchair_pref_summary">Bazı ayarlar doğru uygulanmadığında yardımcı olabilir</string>
   <string name="rebuild_icondb_pref_title">Simge Veritabanını Yeniden Oluştur</string>
   <string name="pinch_to_overview_pref_title">Gözden geçirmek için sıkıştır</string>
@@ -321,8 +321,8 @@
   <string name="import_db_title">Veritabanını içe aktar</string>
   <string name="export_prefs_title">Ayarları dışa aktarın</string>
   <string name="import_prefs_title">Ayarları içe aktarın</string>
-  <string name="notification_listener_label">Lawnchair - Bildirim rozetleri</string>
-  <string name="color_extraction_label">Lawnchair - Renk çıkarma</string>
+  <string name="notification_listener_label">Lawnsearch - Bildirim rozetleri</string>
+  <string name="color_extraction_label">Lawnsearch - Renk çıkarma</string>
   <string name="test_title">Test</string>
   <string name="visibility">Görünürlük</string>
   <string name="default_text">Varsayılan</string>

@@ -243,10 +243,10 @@
   <string name="shortcuts_menu_with_notifications_description">%1$d pikakuvaketta ja %2$d ilmoitusta %3$s</string>
   <string name="notifications_header">Ilmoitukset</string>
   <string name="widgets_bottom_sheet_title">%1$s widgettiä</string>
-  <!-- About Lawnchair -->
-  <string name="about_text">Lawnchair on käynnistysohjelma, jonka on luonut Till Kottmann (Deletescape). Se pohjautuu Launcher3 -käynnistysohjelmaan.</string>
+  <!-- About Lawnsearch -->
+  <string name="about_text">Lawnsearch on käynnistysohjelma, jonka on luonut Till Kottmann (Deletescape). Se pohjautuu Launcher3 -käynnistysohjelmaan.</string>
   <string name="about_title">Tietoja</string>
-  <string name="about_pref_summary">Opi tuntemaan Lawnchair tiimi</string>
+  <string name="about_pref_summary">Opi tuntemaan Lawnsearch tiimi</string>
   <string name="changelog_title">Muutosloki buildille #%d</string>
   <string name="week_day_format">%1$s, %2$s</string>
   <string name="icon_pack_preference_title">Kuvakepaketti</string>
@@ -278,7 +278,7 @@
   <string name="full_width_width_widgets_pref_title">Koko leveyden widgetit</string>
   <string name="full_width_widgets_pref_summary">Salli widgettien kattaa koko leveys ilman välejä</string>
   <string name="notification_access_pref_title">Ilmoitusten merkit ja esikatselu</string>
-  <string name="notification_access_pref_summary">Allow Lawnchair to access your notification to enable this features</string>
+  <string name="notification_access_pref_summary">Allow Lawnsearch to access your notification to enable this features</string>
   <string name="general_pref_title">Työpöytä</string>
   <string name="dock_pref_title">Telakka</string>
   <string name="app_drawer_pref_title">Sovellusvalikko</string>
@@ -291,7 +291,7 @@
   <string name="app_drawer_pref_summary">Muokkaa sovellusvalikkoa</string>
   <string name="pixel_ui_pref_summary">Eri elementtien teemat</string>
   <string name="backup_pref_title">Varmuuskopiointi</string>
-  <string name="behavior_pref_summary">Muuta Lawnchairin toimintaa</string>
+  <string name="behavior_pref_summary">Muuta Lawnsearchin toimintaa</string>
   <string name="backup_pref_summary">Varmuuskopioi tietokantasi ja asetukset</string>
   <string name="debug_pref_summary">Käynnistä tai rakenna uudelleen kuvaketietokanta</string>
   <string name="show_pixel_bar_pref_title">Näytä Pixel yläpalkki</string>
@@ -301,7 +301,7 @@
   <string name="pixel_style_icons_pref_title">Käytä Pixel-kuvakkeita</string>
   <string name="pixel_style_icons_pref_summary">Kun käytössä pyöreitä kuvakkeita käytetään siellä missä se on mahdollista</string>
   <string name="show_google_now_tab_pref_title">Näytä Google Now sivu</string>
-  <string name="restart_lawnchair_pref_title">Käynnistä Lawnchair uudelleen</string>
+  <string name="restart_lawnchair_pref_title">Käynnistä Lawnsearch uudelleen</string>
   <string name="restart_lawnchair_pref_summary">Voi olla hyödyllistä, jos jotkin asetukset eivät toimi oikein</string>
   <string name="rebuild_icondb_pref_title">Rakenna kuvaketietokanta uudelleen</string>
   <string name="pinch_to_overview_pref_title">Nipistämällä yleisnäkymään</string>
@@ -321,8 +321,8 @@
   <string name="import_db_title">Tietokanta</string>
   <string name="export_prefs_title">Asetukset</string>
   <string name="import_prefs_title">Asetukset</string>
-  <string name="notification_listener_label">Lawnchair - Ilmoituksen merkit</string>
-  <string name="color_extraction_label">Lawnchair - Värin poiminta</string>
+  <string name="notification_listener_label">Lawnsearch - Ilmoituksen merkit</string>
+  <string name="color_extraction_label">Lawnsearch - Värin poiminta</string>
   <string name="test_title">Testi</string>
   <string name="visibility">Näkyvyys</string>
   <string name="default_text">Oletus</string>
