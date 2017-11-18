@@ -1,8 +1,8 @@
-package ch.deletescape.lawnchair.launcherclient;
+package ch.deletescape.lawnsearch.launcherclient;
 
 import android.os.Bundle;
-import ch.deletescape.lawnchair.launcherclient.WindowLayoutParams;
-import ch.deletescape.lawnchair.launcherclient.ILauncherClientProxyCallback;
+import ch.deletescape.lawnsearch.launcherclient.WindowLayoutParams;
+import ch.deletescape.lawnsearch.launcherclient.ILauncherClientProxyCallback;
 
 interface ILauncherClientProxy {
 

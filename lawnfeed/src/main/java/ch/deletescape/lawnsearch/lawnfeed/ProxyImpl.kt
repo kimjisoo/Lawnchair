@@ -1,4 +1,4 @@
-package ch.deletescape.lawnchair.lawnfeed
+package ch.deletescape.lawnsearch.lawnfeed
 
 import android.content.*
 import android.content.pm.PackageManager
@@ -8,10 +8,10 @@ import android.os.Bundle
 import android.os.IBinder
 import android.os.Process
 import android.util.Log
-import ch.deletescape.lawnchair.launcherclient.ILauncherClientProxy
-import ch.deletescape.lawnchair.launcherclient.ILauncherClientProxyCallback
-import ch.deletescape.lawnchair.launcherclient.LauncherClientProxyConnection
-import ch.deletescape.lawnchair.launcherclient.WindowLayoutParams
+import ch.deletescape.lawnsearch.launcherclient.ILauncherClientProxy
+import ch.deletescape.lawnsearch.launcherclient.ILauncherClientProxyCallback
+import ch.deletescape.lawnsearch.launcherclient.LauncherClientProxyConnection
+import ch.deletescape.lawnsearch.launcherclient.WindowLayoutParams
 import com.google.android.libraries.launcherclient.ILauncherOverlay
 import com.google.android.libraries.launcherclient.ILauncherOverlayCallback
 
@@ -140,7 +140,7 @@ class ProxyImpl(val context: Context) : ILauncherClientProxy.Stub() {
     }
 
     override fun init(callback: ILauncherClientProxyCallback): Int {
-        allowed = "ch.deletescape.lawnchair.plah" == callingPackage || "ch.deletescape.lawnchair" == callingPackage
+        allowed = "ch.deletescape.lawnsearch.plah" == callingPackage || "ch.deletescape.lawnsearch" == callingPackage
         enforcePermission()
         proxyCallback = callback
         ProxyImpl.getVersion(context)

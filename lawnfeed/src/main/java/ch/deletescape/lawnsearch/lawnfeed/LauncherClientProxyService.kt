@@ -1,4 +1,4 @@
-package ch.deletescape.lawnchair.lawnfeed
+package ch.deletescape.lawnsearch.lawnfeed
 
 import android.app.Service
 import android.content.Intent

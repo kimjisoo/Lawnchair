@@ -13,7 +13,7 @@ android {
         }
     }
     defaultConfig {
-        applicationId "ch.deletescape.lawnchair.lawnfeed"
+        applicationId "ch.deletescape.lawnsearch.lawnfeed"
         minSdkVersion 21
         targetSdkVersion 27
 

@@ -1,4 +1,4 @@
-package ch.deletescape.lawnchair.launcherclient;
+package ch.deletescape.lawnsearch.launcherclient;
 
 interface ILauncherClientProxyCallback {
 
