@@ -98,10 +98,14 @@ object PreferenceFlags {
 
     const val KEY_APP_VISIBILITY_PREFIX = "visibility_"
     const val KEY_PREVIOUS_BUILD_NUMBER = "previousBuildNumber"
+    const val KEY_DISABLE_LAWNFEED_POPUP = "disableLawnfeedPopup"
 
     const val KEY_ALTERNATE_ICON_PREFIX = "alternateIcon_"
     const val KEY_ITEM_ALIAS_PREFIX = "alias_"
     const val KEY_USER_CREATION_TIME_KEY_PREFIX = "user_creation_time_"
+    const val KEY_HIDDEN_APPS_SET = "hidden-app-set"
+    const val KEY_HIDDEN_APPS = "hidden-app"
+    const val KEY_TWO_ROW_DOCK = "pref_twoRowDock"
 
     const val EMPTY_DATABASE_CREATED = "EMPTY_DATABASE_CREATED"
 

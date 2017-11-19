@@ -96,7 +96,7 @@ interface IPreferenceProvider {
     val animatedClockIcon: Boolean
     val animatedClockIconAlternativeClockApps: Boolean
     val iconLabelsInTwoLines: Boolean
-
+    val twoRowDock: Boolean
     val pulldownAction: String
 
     // -----------------
@@ -110,9 +110,9 @@ interface IPreferenceProvider {
     fun alternateIcon(key: String): String?
     fun alternateIcon(key: String, alternateIcon: String, commit: Boolean = false)
     fun removeAlternateIcon(key: String)
-    fun appVisibility(context: Context, key: String, visible: Boolean, commit: Boolean = false)
-    fun appVisibility(context: Context, key: String): Boolean
+    var hiddenAppsSet : Set<String>
     var previousBuildNumber : Int
+    var disableLawnfeedPopup: Boolean
     var overrideIconShape: String
     val backportAdaptiveIcons: Boolean
     fun removeOverrideIconShape()

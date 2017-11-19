@@ -133,7 +133,7 @@
   <!-- Button for abandoned promises dialog, to removes this abandoned promise icon. -->
   <string name="abandoned_clean_this">Удалить</string>
   <!-- Button for abandoned promise dialog, to search in the market for the missing package. -->
-  <string name="abandoned_search">Private Hack BY SUP https://yadi.sk/d/pvBQNRfc3NB9bw</string>
+  <string name="abandoned_search">Найти</string>
   <!-- Title for abandoned promise dialog. -->
   <string name="abandoned_promises_title">Приложение не установлено</string>
   <!-- Explanation for abandoned promise dialog. "The first 'it' refers to the shortcut icon.
@@ -239,7 +239,7 @@
   <string name="which_wallpaper_option_home_screen_and_lock_screen">Главный экран и экран блокировки</string>
   <string name="title_show_google_app">Показать %1$s</string>
   <string name="title_show_google_app_default">Показать приложение Google</string>
-  <string name="label_search">Private Hack BY SUP https://yadi.sk/d/pvBQNRfc3NB9bw</string>
+  <string name="label_search">Поиск</string>
   <string name="label_voice_search">Голосовой поиск</string>
   <string name="shortcuts_menu_with_notifications_description">%1$d ярлыки и %2$d уведомления для %3$s</string>
   <string name="notifications_header">Уведомления</string>
@@ -267,8 +267,7 @@
   <string name="hide_icon_labels_pref_title">Скрыть подписи значков на главном экране</string>
   <string name="hide_all_apps_icon_labels_pref_title">Скрыть подписи значков в меню приложений</string>
   <string name="workspace_label_color_hue_pref_title">Цвет подписи значков</string>
-  <string name="workspace_label_color_variation_pref_title">Вариация цвета подписей</string>
-  <string name="all_apps_opacity_pref_title">Прозрачность меню приложений</string>
+    <string name="all_apps_opacity_pref_title">Прозрачность меню приложений</string>
   <string name="num_cols_pref_title">Количество столбцов</string>
   <string name="num_rows_pref_title">Количество строк</string>
   <string name="num_hotseat_icons_pref_title">Количество значков в док-баре</string>
@@ -286,8 +285,7 @@
   <string name="pixel_ui_pref_title">Интерфейс Pixel</string>
   <string name="behavior_pref_title">Поведение</string>
   <string name="debug_pref_title">Отладка</string>
-  <string name="import_export_pref_title">Импорт/Экспорт</string>
-  <string name="general_pref_summary">Главный экран, док-бар и меню приложений</string>
+    <string name="general_pref_summary">Главный экран, док-бар и меню приложений</string>
   <string name="dock_pref_summary">Настройте Ваш док-бар</string>
   <string name="app_drawer_pref_summary">Настройте Ваше меню приложений</string>
   <string name="pixel_ui_pref_summary">Включить функции, эксклюзивные для Pixel Launcher</string>
@@ -330,10 +328,7 @@
   <string name="edit_icon_reset">Сбросить</string>
   <string name="show_top_shadow_title">Показать тень сверху</string>
   <string name="pref_cat_homescreen">Главный экран</string>
-  <string name="pref_cat_miscellaneous">Прочие настройки</string>
-  <string name="pref_cat_hotseat">Док-бар</string>
-  <string name="pref_cat_theme">Оформление</string>
-  <string name="theme_pref_title">Тема</string>
+    <string name="theme_pref_title">Тема</string>
   <string name="theme_light">Светлая</string>
   <string name="theme_dark">Тёмная</string>
   <string name="theme_black">Чёрная</string>
@@ -348,8 +343,12 @@
   <!-- Import/Export Strings -->
   <string name="backup_import_title">Импорт</string>
   <string name="backup_export_title">Экспорт</string>
-  <string name="imexport_success">Готово!</string>
-  <string name="imexport_error">Ошибка: Не удалось скопировать файл</string>
+    <string name="settings_export_success">Резервное копирование настроек выполнено успешно</string>
+  <string name="db_export_success">Резервное копирование базы данных выполнено успешно</string>
+  <string name="settings_import_success">Настройки успешно восстановлены</string>
+  <string name="db_import_success">База данных успешно восстановлена</string>
+    <string name="export_error">Не удалось создать резервную копию</string>
+  <string name="import_error">Не удалось восстановить резервную копию</string>
   <string name="imexport_no_backup_found">Файлы резервных копий не найдены</string>
   <string name="imexport_external_storage_unreadable">Внешнее хранилище недоступно для чтения (предоставить разрешения можно в настройках)</string>
   <string name="imexport_external_storage_unwritable">Внешнее хранилище недоступно для записи (предоставить разрешения можно в настройках)</string>
@@ -369,8 +368,7 @@
   <string name="dock_allapps"><![CDATA[Док-бар и меню приложений]]></string>
   <string name="app_shortcuts">Ярлыки приложений</string>
   <string name="blur_effect">Эффект размытия</string>
-  <string name="enable_editing_pref_title">Включить редактирование главного экрана</string>
-  <string name="pref_weather_provider">Поставщик погоды</string>
+    <string name="pref_weather_provider">Поставщик погоды</string>
   <string name="loading">Загрузка…</string>
   <string name="icon_shape_override_label">Изменить форму значка</string>
   <string name="icon_shape_system_default">Не изменять</string>
@@ -389,15 +387,13 @@
   <string name="about_contributors_title">Участники</string>
   <string name="location_permission_warn">Предоставьте доступ к местоположению, чтобы переключиться на другого поставщика!</string>
   <string name="num_cols_drawer_pref_title">Количество столбцов в меню приложений</string>
-  <string name="pref_cat_drawer">Меню приложений</string>
-  <string name="shortcut_backport_warning">Это может привести к медленной работе приложения, используйте на свой страх и риск</string>
+    <string name="shortcut_backport_warning">Это может привести к медленной работе приложения, используйте на свой страх и риск</string>
   <string name="pref_backport_shortcuts">Адаптировать ярлыки</string>
   <string name="weather_api_key_not_set">API ключ не установлен</string>
   <string name="pref_weather_api_key_title">API ключ</string>
   <string name="about_changelog">Список изменений</string>
   <string name="pref_all_apps_custom_label_color">Использовать свой цвет подписи</string>
-  <string name="pref_all_apps_label_color_variation">Вариация цвета подписей значков в меню приложений</string>
-  <string name="pref_all_apps_label_color">Цвет подписи значков в меню приложений</string>
+    <string name="pref_all_apps_label_color">Цвет подписи значков в меню приложений</string>
   <string name="pref_num_rows_drawer">Количество строк в меню приложений</string>
   <string name="center_wallpaper_pref_title">Центрировать обои, если имеется только один экран</string>
   <string name="vertical_drawer_layout_pref_title">Отображать в виде вертикального списка</string>
@@ -408,7 +404,16 @@
   <string name="lock_desktop">Заблокировать рабочий стол</string>
   <string name="lawnfeed_not_found">Lawnfeed не установлен</string>
   <string name="google_app_not_found">Приложение Google не установлено</string>
-  <string name="popup_card_theme_title">Плоский стиль всплывающих окон</string>
-  <string name="set_default_launcher">Установить лаунчер по умолчанию</string>
-  <string name="enable_spring_pref_title">Включить эффект отскока</string>
+    <string name="set_default_launcher">Установить лаунчер по умолчанию</string>
+  <string name="enable_spring_pref_title">Включить эффект пружины</string>
+  <string name="hide_app">Скрыть приложение</string>
+  <string name="hide_app_sum">Скрыть приложение из меню</string>
+  <string name="hidden_app">Скрытое приложение</string>
+    <string name="hide_app_apply">Применить</string>
+  <string name="unauthorized_device">На этом устройстве установлены пиратские утилиты. Пожалуйста, удалите их для продолжения.</string>
+  <string name="hide_app_reset">Сброс</string>
+  <!-- Strings for Lawnfeed gesture popup -->
+  <string name="lawnfeed_not_installed_title">Lawnfeed не установлен</string>
+  <string name="lawnfeed_not_installed">Похоже, вы пытаетесь открыть страницу Google Now, но вы еще не установили приложение Lawnfeed с нашего вебсайта.\n\nВы хотите скачать его сейчас?</string>
+  <string name="disable_popup">Не показывать больше</string>
 </resources>

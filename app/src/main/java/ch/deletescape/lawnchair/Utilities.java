@@ -17,13 +17,16 @@
 package ch.deletescape.lawnchair;
 
 import android.app.Activity;
+import android.app.AlarmManager;
 import android.app.AlertDialog;
+import android.app.PendingIntent;
 import android.app.WallpaperManager;
 import android.content.ActivityNotFoundException;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
@@ -46,10 +49,12 @@ import android.graphics.drawable.AdaptiveIconDrawable;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.PaintDrawable;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.PowerManager;
 import android.os.UserHandle;
+import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 import android.text.Spannable;
 import android.text.SpannableString;
@@ -88,6 +93,7 @@ import ch.deletescape.lawnchair.config.IThemer;
 import ch.deletescape.lawnchair.config.ThemeProvider;
 import ch.deletescape.lawnchair.dynamicui.ExtractedColors;
 import ch.deletescape.lawnchair.graphics.ShadowGenerator;
+import ch.deletescape.lawnchair.overlay.ILauncherClient;
 import ch.deletescape.lawnchair.pixelify.AdaptiveIconDrawableCompat;
 import ch.deletescape.lawnchair.preferences.IPreferenceProvider;
 import ch.deletescape.lawnchair.preferences.PreferenceFlags;
@@ -141,12 +147,45 @@ public final class Utilities {
     private static final int CORE_POOL_SIZE = CPU_COUNT + 1;
     private static final int MAXIMUM_POOL_SIZE = CPU_COUNT * 2 + 1;
     private static final int KEEP_ALIVE = 1;
+
     /**
      * An {@link Executor} to be used with async task with no limit on the queue size.
      */
     public static final Executor THREAD_POOL_EXECUTOR = new ThreadPoolExecutor(
             CORE_POOL_SIZE, MAXIMUM_POOL_SIZE, KEEP_ALIVE,
             TimeUnit.SECONDS, new LinkedBlockingQueue<Runnable>());
+
+    // Blacklisted APKs which will be hidden, these include simple regex formatting, without
+    // full regex formatting (e.g. com.android. will block everything that starts with com.android.)
+    // Taken from: https://github.com/substratum/template/blob/kt-n/app/src/main/kotlin/substratum/theme/template/Constants.kt
+    private static final String[] BLACKLISTED_APPLICATIONS = {"com.android.vending.billing.InAppBillingService.LOCK",
+            "com.android.vending.billing.InAppBillingService.LACK",
+            "cc.madkite.freedom",
+            "p.jasi2169.al3",                                                        
+            "zone.jasi2169.uretpatcher",
+            "uret.jasi2169.patcher",
+            "com.dimonvideo.luckypatcher",
+            "com.chelpus.lackypatch",
+            "com.forpda.lp",
+            "com.android.vending.billing.InAppBillingService.LUCK",
+            "com.android.protips",
+            "com.android.vending.billing.InAppBillingService.CLON",
+            "com.android.vendinc",
+            "com.appcake",
+            "ac.market.store",
+            "org.sbtools.gamehack",
+            "com.zune.gamekiller",
+            "com.aag.killer",
+            "com.killerapp.gamekiller",
+            "cn.lm.sq",
+            "net.schwarzis.game_cih",
+            "org.creeplays.hack",
+            "com.baseappfull.fwd",
+            "com.zmapp",
+            "com.dv.marketmod.installer",
+            "org.mobilism.android",
+            "com.blackmartalpha",
+            "org.blackmart.market"};
 
     public static boolean isPropertyEnabled(String propertyName) {
         return Log.isLoggable(propertyName, Log.VERBOSE);
@@ -880,11 +919,16 @@ public final class Utilities {
     }
 
     public static void setAppVisibility(Context context, String key, boolean visible) {
-        getPrefs(context).appVisibility(context, key, visible, false);
+        Set<String> hiddenApps = getPrefs(context).getHiddenAppsSet();
+        if (visible)
+            hiddenApps.remove(key);
+        else
+            hiddenApps.add(key);
+        getPrefs(context).setHiddenAppsSet(hiddenApps);
     }
 
     public static boolean isAppHidden(Context context, String key) {
-        return !getPrefs(context).appVisibility(context, key);
+        return getPrefs(context).getHiddenAppsSet().contains(key);
     }
 
     public static int getDynamicAccent(Context context) {
@@ -982,7 +1026,7 @@ public final class Utilities {
         // TODO: Maybe we can add all apps that end with .clockpackage/.DeskClock/.clock/???
         // Or that contain .clock./.deskclock or end with those?
         ArrayList<String> clockApps = new ArrayList<>();
-        clockApps.add("com.google.android.deskclock/com.android.deskclock.DeskClock"); // Stock
+        clockApps.add("com.android.deskclock/com.android.deskclock.DeskClock"); // Stock
         clockApps.add("com.sec.android.app.clockpackage/com.sec.android.app.clockpackage.ClockPackage"); // Samsung
         clockApps.add("com.android.deskclock/com.android.deskclock.DeskClockTabActivity"); // MIUI
 
@@ -1030,4 +1074,107 @@ public final class Utilities {
                 Utilities.isComponentClock(componentName, !Utilities.getPrefs(context).getAnimatedClockIconAlternativeClockApps());
     }
 
+    public static boolean isBlacklistedAppInstalled(Context context) {
+        PackageManager pm = context.getPackageManager();
+        List<ApplicationInfo> packages = pm.getInstalledApplications(PackageManager.GET_META_DATA);
+
+        for (ApplicationInfo packageInfo : packages) {
+            for (String blacklistedApp : BLACKLISTED_APPLICATIONS) {
+                if (packageInfo.packageName.startsWith(blacklistedApp)) {
+                    return true;
+                }
+            }
+        }
+
+        return false;
+    }
+
+    public static void showLawnfeedPopup(final Context context) {
+        if (!BuildConfig.ENABLE_LAWNFEED) return;
+        final IPreferenceProvider prefs = getPrefs(context);
+
+        // Don't show anything if the user have selected "Don't show again"
+        if (prefs.getDisableLawnfeedPopup()) {
+            return;
+        }
+
+        int enabledState = ILauncherClient.Companion.getEnabledState(context);
+
+        // Check if the user have Lawnfeed installed
+        if (enabledState == ILauncherClient.ENABLED) {
+            // Check if the user have enable Google Now page
+            if (prefs.getShowGoogleNowTab()) {
+                return;
+            }
+
+            // Show a popup about the disabled Google Now page option
+            new AlertDialog.Builder(context)
+                .setTitle(R.string.lawnfeed_not_enabled_title)
+                .setMessage(R.string.lawnfeed_not_enabled)
+                .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        // Enable Google Now page setting
+                        SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(context);
+                        settings.edit().putBoolean(PreferenceFlags.KEY_PREF_SHOW_NOW_TAB, true).commit();
+
+                        // Restart Lawnchair to enable Lawnfeed
+                        LauncherAppState.getInstanceNoCreate().getLauncher().scheduleKill();
+                    }
+                })
+                .setNeutralButton(R.string.disable_popup, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                       prefs.setDisableLawnfeedPopup(true);
+                    }
+                })
+                .setNegativeButton(android.R.string.cancel, null)
+                .show();
+        }
+        // Otherwise show a popup about missing Lawnfeed app
+        else if (enabledState == ILauncherClient.DISABLED_NO_PROXY_APP) {
+            new AlertDialog.Builder(context)
+                .setTitle(R.string.lawnfeed_not_installed_title)
+                .setMessage(R.string.lawnfeed_not_installed)
+                .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        // Open website with download link for Lawnfeed
+                        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://lawnchair.info/getlawnfeed.html"));
+                        context.startActivity(intent);
+                    }
+                })
+                .setNeutralButton(R.string.disable_popup, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        prefs.setDisableLawnfeedPopup(true);
+                    }
+                })
+                .setNegativeButton(android.R.string.cancel, null)
+                .show();
+        }
+    }
+
+
+    public static void restartLauncher(Context context) {
+        PackageManager pm = context.getPackageManager();
+        Intent startActivity = pm.getLaunchIntentForPackage(context.getPackageName());
+
+        startActivity.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+
+        // Create a pending intent so the application is restarted after System.exit(0) was called.
+        // We use an AlarmManager to call this intent in 100ms
+        PendingIntent mPendingIntent = PendingIntent.getActivity(context, 0, startActivity, PendingIntent.FLAG_CANCEL_CURRENT);
+        AlarmManager mgr = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
+        mgr.set(AlarmManager.RTC, System.currentTimeMillis() + 100, mPendingIntent);
+
+        // Kill the application
+        System.exit(0);
+    }
+
+    public static int getNumberOfHotseatRows(Context context){
+        boolean twoLines = PreferenceProvider.INSTANCE.getPreferences(context).getTwoRowDock();
+        return twoLines ? 2 : 1;
+
+    }
 }

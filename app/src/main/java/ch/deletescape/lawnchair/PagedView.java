@@ -187,8 +187,20 @@ public abstract class PagedView extends ViewGroup implements ViewGroup.OnHierarc
     protected final Rect mInsets = new Rect();
     protected final boolean mIsRtl;
 
-    // Edge effect
-    private final LauncherEdgeEffect mEdgeGlowLeft = new LauncherEdgeEffect();
+    // Edge effect, add swipe-to-left gesture for Lawnfeed
+    private final LauncherEdgeEffect mEdgeGlowLeft = new LauncherEdgeEffect(){
+        @Override
+        public void onRelease() {
+            // Check if user swiped
+            if (mPullDistance > 0) {
+                Utilities.showLawnfeedPopup(getContext());
+            }
+
+            super.onRelease();
+        }
+    };
+
+    // Edge effect for right side
     private final LauncherEdgeEffect mEdgeGlowRight = new LauncherEdgeEffect();
 
     public PagedView(Context context) {
@@ -1925,7 +1937,6 @@ public abstract class PagedView extends ViewGroup implements ViewGroup.OnHierarc
 
         final int newX = getScrollForPage(whichPage);
         int delta = newX - getUnboundedScrollX();
-        int duration;
 
         if (Math.abs(velocity) < mMinFlingVelocity) {
             // If the velocity is low enough, then treat this more as an automatic page advance
@@ -1948,7 +1959,7 @@ public abstract class PagedView extends ViewGroup implements ViewGroup.OnHierarc
         // we want the page's snap velocity to approximately match the velocity at which the
         // user flings, so we scale the duration by a value near to the derivative of the scroll
         // interpolator at zero, ie. 5. We use 4 to make it a little slower.
-        duration = 4 * Math.round(1000 * Math.abs(distance / velocity));
+        int duration = 4 * Math.round(1000 * Math.abs(distance / velocity));
 
         snapToPage(whichPage, delta, duration);
     }
@@ -2210,7 +2221,7 @@ public abstract class PagedView extends ViewGroup implements ViewGroup.OnHierarc
     }
 
     @Override
-    public boolean onHoverEvent(android.view.MotionEvent event) {
+    public boolean onHoverEvent(MotionEvent event) {
         return true;
     }
 }
