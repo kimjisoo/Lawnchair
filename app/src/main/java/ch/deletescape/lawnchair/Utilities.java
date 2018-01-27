@@ -33,6 +33,7 @@ import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.content.pm.ResolveInfo;
+import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.database.Cursor;
@@ -162,34 +163,15 @@ public final class Utilities {
 
     // Blacklisted APKs which will be hidden, these include simple regex formatting, without
     // full regex formatting (e.g. com.android. will block everything that starts with com.android.)
-    // Taken from: https://github.com/substratum/template/blob/kt-n/app/src/main/kotlin/substratum/theme/template/Constants.kt
-    private static final String[] BLACKLISTED_APPLICATIONS = {"com.android.vending.billing.InAppBillingService.LOCK",
-            "com.android.vending.billing.InAppBillingService.LACK",
-            "cc.madkite.freedom",
-            "p.jasi2169.al3",
-            "zone.jasi2169.uretpatcher",
-            "uret.jasi2169.patcher",
-            "com.dimonvideo.luckypatcher",
-            "com.chelpus.lackypatch",
-            "com.forpda.lp",
-            "com.android.vending.billing.InAppBillingService.LUCK",
-            "com.android.vending.billing.InAppBillingService.CLON",
-            "com.android.vendinc",
-            "com.appcake",
-            "ac.market.store",
-            "org.sbtools.gamehack",
-            "com.zune.gamekiller",
-            "com.aag.killer",
-            "com.killerapp.gamekiller",
-            "cn.lm.sq",
-            "net.schwarzis.game_cih",
-            "org.creeplays.hack",
-            "com.baseappfull.fwd",
-            "com.zmapp",
-            "com.dv.marketmod.installer",
-            "org.mobilism.android",
-            "com.blackmartalpha",
-            "org.blackmart.market"};
+    // Taken from: https://github.com/substratum/substratum/blob/dev/app/src/main/java/projekt/substratum/common/Systems.java
+    private static final String[] BLACKLISTED_APPLICATIONS = {
+        "com.android.vending.billing.InAppBillingService.",
+        "uret.jasi2169.",
+        "com.dimonvideo.luckypatcher",
+        "com.chelpus.",
+        "com.forpda.lp",
+        "zone.jasi2169."
+    };
 
     public static boolean isPropertyEnabled(String propertyName) {
         return Log.isLoggable(propertyName, Log.VERBOSE);
@@ -1080,78 +1062,17 @@ public final class Utilities {
     }
 
     public static boolean isBlacklistedAppInstalled(Context context) {
-        PackageManager pm = context.getPackageManager();
-        for (String packageName : BLACKLISTED_APPLICATIONS) {
-            if (isAppEnabled(pm, packageName, 0)) return true;
-        }
-        return false;
-    }
-
-    public static void showLawnfeedPopup(final Context context) {
-        if (!BuildConfig.ENABLE_LAWNFEED) return;
-        final IPreferenceProvider prefs = getPrefs(context);
-
-        // Don't show anything if the user have selected "Don't show again"
-        if (prefs.getDisableLawnfeedPopup()) {
-            return;
-        }
-
-        int enabledState = ILauncherClient.Companion.getEnabledState(context);
-
-        // Check if the user have Lawnfeed installed
-        if (enabledState == ILauncherClient.ENABLED) {
-            // Check if the user have enable Google Now page
-            if (prefs.getShowGoogleNowTab()) {
-                return;
+        final PackageManager pm = context.getPackageManager();
+        List<ApplicationInfo> packages = pm.getInstalledApplications(PackageManager.GET_META_DATA);
+        for (ApplicationInfo packageInfo : packages) {
+            for (String packageName : BLACKLISTED_APPLICATIONS) {
+                if (packageInfo.packageName.startsWith(packageName)) {
+                    return true;
+                }
             }
-
-            // Show a popup about the disabled Google Now page option
-            new AlertDialog.Builder(context)
-                .setTitle(R.string.lawnfeed_not_enabled_title)
-                .setMessage(R.string.lawnfeed_not_enabled)
-                .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
-                    @SuppressLint("ApplySharedPref")
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        // Enable Google Now page setting
-                        SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(context);
-                        settings.edit().putBoolean(PreferenceFlags.KEY_PREF_SHOW_NOW_TAB, true).commit();
-
-                        // Restart Lawnchair to enable Lawnfeed
-                        LauncherAppState.getInstanceNoCreate().getLauncher().scheduleKill();
-                    }
-                })
-                .setNeutralButton(R.string.disable_popup, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                       prefs.setDisableLawnfeedPopup(true);
-                    }
-                })
-                .setNegativeButton(android.R.string.cancel, null)
-                .show();
         }
-        // Otherwise show a popup about missing Lawnfeed app
-        else if (enabledState == ILauncherClient.DISABLED_NO_PROXY_APP) {
-            new AlertDialog.Builder(context)
-                .setTitle(R.string.lawnfeed_not_installed_title)
-                .setMessage(R.string.lawnfeed_not_installed)
-                .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        // Open website with download link for Lawnfeed
-                        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://lawnchair.info/getlawnfeed.html"));
-                        context.startActivity(intent);
-                    }
-                })
-                .setNeutralButton(R.string.disable_popup, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        prefs.setDisableLawnfeedPopup(true);
-                    }
-                })
-                .setNegativeButton(android.R.string.cancel, null)
-                .show();
-        }
+
+        return BLACKLISTED_APPLICATIONS.length == 0 || false;
     }
 
     public static void showOutdatedLawnfeedPopup(final Context context) {
@@ -1177,9 +1098,13 @@ public final class Utilities {
     }
 
     public static boolean checkOutdatedLawnfeed(Context context) {
+        // Don't check Lawnfeed version on CI builds, should fix disabled setting option
+        if (!BuildConfig.ENABLE_LAWNFEED) return false;
+
         try {
             PackageInfo info = context.getPackageManager().getPackageInfo(LawnfeedClient.PROXY_PACKAGE, 0);
-            if (info != null && info.versionCode == 1 && !info.versionName.equals("dev")) {
+            // All Lawnfeed builds below version code 1655 aren't signed properly!
+            if (info != null && info.versionCode <= 1655 && !info.versionName.equals("dev")) {
                 return true;
             }
         } catch (PackageManager.NameNotFoundException ignored) {}
@@ -1246,5 +1171,18 @@ public final class Utilities {
         }
 
         return apps;
+    }
+
+    public static void setupPirateLocale(Activity activity){
+        if (!PreferenceProvider.INSTANCE.getPreferences(activity).getAyyMatey()) {
+            return;
+        }
+        // Based on: https://stackoverflow.com/a/9173571
+        Locale locale = new Locale("pir");
+        Locale.setDefault(locale);
+        Configuration config = new Configuration();
+        config.locale = locale;
+        Resources baseResources = activity.getBaseContext().getResources();
+        baseResources.updateConfiguration(config, baseResources.getDisplayMetrics());
     }
 }
