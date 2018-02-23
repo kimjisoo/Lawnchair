@@ -1130,7 +1130,7 @@ public final class Utilities {
 
     public static int getNumberOfHotseatRows(Context context){
         boolean twoLines = PreferenceProvider.INSTANCE.getPreferences(context).getTwoRowDock();
-        return twoLines ? 2 : 1;
+        return twoLines ? 3 : 1;
     }
 
     public static void showResetAlternativeIcons(final Context context, final List<String> appsList) {
