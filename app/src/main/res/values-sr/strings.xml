@@ -245,7 +245,6 @@
   <string name="notifications_header">Обавештења</string>
   <string name="widgets_bottom_sheet_title">%1$s виџета</string>
   <!-- About Lawnchair -->
-  <string name="about_text">Lawnchair је покретач ког је креирао Till Kottmann (deletescape). Заснован је на апликацији Launcher3 из AOSP-а.</string>
   <string name="about_title">О апликацији</string>
   <string name="about_pref_summary">Упознајте Lawnchair тим</string>
   <string name="changelog_title">Промене за изградњу #%d</string>
@@ -273,6 +272,8 @@
   <string name="num_hotseat_icons_pref_title">Број икона на Доку</string>
   <string name="icon_scale_pref_title">Величина икона</string>
   <string name="hotseat_height_scale">Промени висину</string>
+  <string name="hotseat_custom_opacity">Доk провидност</string>
+  <string name="hotseat_uses_custom_opacity">Омогући прилагођенy доk провидност</string>
   <string name="icon_text_scale_pref_title">Величина текста икона</string>
   <string name="icon_text_padding_scale_pref_title">Ikona punjenja skale</string>
   <string name="full_width_width_widgets_pref_title">Пуна ширина виџета</string>
@@ -295,6 +296,8 @@
   <string name="debug_pref_summary">Рестартујте или обновите базу икона</string>
   <string name="show_pixel_bar_pref_title">Прикажи горње траке за Pixel</string>
   <string name="use_wide_searchbar_pref_title">Користи широку траку за претраживање</string>
+  <string name="show_search_pill_title">Прикажи Гоогле претрага пилулу</string>
+  <string name="show_date_or_weather_title">Прикажи датум/време на десној страни</string>
   <string name="show_mic_pref_title">Прикажи Google Assistant дугме</string>
   <string name="use_round_searhbar">Користи заокружену траку претраживања</string>
   <string name="pixel_style_icons_pref_title">Користи Pixel иконе</string>
@@ -326,7 +329,7 @@
   <string name="default_text">Подразумевано</string>
   <string name="edit_icon_reset">Поништи</string>
   <string name="show_top_shadow_title">Прикажи сенку на врху</string>
-  <string name="pref_cat_homescreen">Почетни екран</string>
+  <string name="pref_category_homescreen">Почетни екран</string>
   <string name="theme_pref_title">Тема</string>
   <string name="theme_light">Светло</string>
   <string name="theme_dark">Тамно</string>
@@ -339,6 +342,7 @@
   <string name="pull_down_search">Отвори претрагу</string>
   <string name="pull_down_apps_search">Претрага апликација</string>
   <string name="enable_screen_rotation">Омогући ротацију екрана</string>
+  <string name="use_system_fonts_title">Користити системски фонтовe за етикете</string>
   <!-- Import/Export Strings -->
   <string name="backup_import_title">Увези</string>
   <string name="backup_export_title">Извези</string>
@@ -380,10 +384,6 @@
   <string name="animated_clock_icon_title">Анимирана икона сата</string>
   <string name="animated_clock_icon_alternative_clock_apps_title">Анимирај алтернативне апликације сата</string>
   <string name="animated_clock_icon_alternative_clock_apps_summary">Омогућите ово ако не користите Google Clock апликацију</string>
-  <string name="about_summary_title">Резиме</string>
-  <string name="about_version">Верзија</string>
-  <string name="about_icon_designer">Дизајнер икона</string>
-  <string name="about_contributors_title">Сарадници</string>
   <string name="location_permission_warn">Дозвола за локацију је неопходна за пребацивање на другог провајдера!</string>
   <string name="num_cols_drawer_pref_title">Број колона у drawer-у</string>
   <string name="shortcut_backport_warning">Ово би могло бити споро, користити на сопствени ризик</string>
@@ -395,11 +395,11 @@
   <string name="pref_all_apps_label_color">Боја ознака икона</string>
   <string name="pref_num_rows_drawer">Број редова</string>
   <string name="center_wallpaper_pref_title">Центрирај позадину ако има само један екран</string>
+  <string name="center_wallpaper_pref_summary">Ради само ако почетни екран користи једну страницу</string>
   <string name="vertical_drawer_layout_pref_title">Вертикална листа</string>
   <!-- Time format for Weather Widget -->
   <!-- EEEE is the weekday name, MMMM the month name and d the day of the month -->
   <string name="full_wday_month_day_no_year">EEEE, d. MMMM</string>
-  <string name="about_translators">Преводиоци</string>
   <string name="lock_desktop">Закључај радну површину</string>
   <string name="lawnfeed_not_found">Lawnfeed није инсталиран</string>
   <string name="google_app_not_found">Апликација Google није инсталирана</string>
@@ -417,12 +417,84 @@
   <string name="reset_alternative_icons_title">Поништи алтернативне апликације икона?</string>
   <string name="reset_alternative_icons">Имате %1$d апликација са алтернативним иконама, желите ли да поништите их?</string>
   <string name="error_no_browser">Није пронађена никаква активност која би се бавила URL адресама</string>
-  <string name="snowfall_title">Снег</string>
-  <string name="enable_snowfall_title">Омогући снег на основном екрану</string>
-  <string name="enable_snowfall_summary">Може изазвати проблеме са перформансама.</string>
-  <string name="snowfall_enabled">„Нека је снег, нека пусти да пада снег”</string>
-  <string name="snowflake_size_scale">Скала величине пахуљица</string>
-  <string name="snowflakes_num">Максималан број пахуљица</string>
+  <!-- Strings for popup dialogs -->
+  <string name="lawnfeed_not_enabled_title">Lawnfeed није омогућен</string>
+  <string name="lawnfeed_not_enabled">Изгледа да покушавате да отворите страницу Google Now, али нисте омогућили опцију у понашање подешавање.\n\nДа ли желите да омогућите то сада?</string>
   <string name="lawnfeed_outdated_title">Потребно је ажурирање Lawnfeed</string>
   <string name="lawnfeed_outdated">За рад са овом верзијом Lawnfeed-а неопходна је нова верзија Lawnfeed-а.\n\nПре него што инсталирате исправку, вероватно ћете морати да деинсталирате тренутну верзију Lawnfeed-а.\n\nЖелите ли да је преузмете сада?</string>
+  <string name="title_storage_permission_required">Потребанa дозвола за складиштење</string>
+  <string name="content_storage_permission_required">У Андроид 8.1 и изнад дозволе за складиштење је потребно да апликације приступе позадини. Без поменуте дозволе се може срушити или показати неочекивано понашање.</string>
+  <string name="disable_popup">Не приказуј поново</string>
+  <string name="backups">Резервна копија</string>
+  <string name="new_backup">Направи</string>
+  <string name="restore_backup">Oпорави</string>
+  <string name="backup_name">Име</string>
+  <string name="backup_location">Локација</string>
+  <string name="choose_backup_path">Прегледај</string>
+  <string name="backup_homescreen">Почетни екран</string>
+  <string name="backup_contents">Садржај резервне копије</string>
+  <string name="backup_settings">Подешавања</string>
+  <string name="backup_wallpaper">Позадина</string>
+  <string name="backup_error_blank_name">Име не сме бити празно</string>
+  <string name="backup_error_blank_location">Локација не сме да буде празнa</string>
+  <string name="backup_error_blank_contents">Садржај не сме бити празaн</string>
+  <string name="backup_creating">Креирање резервне копије</string>
+  <string name="no_recent_backups">Нема недавних резервних копија</string>
+  <string name="backup_loading">Учитавање...</string>
+  <string name="backup_invalid">Недоступно</string>
+  <string name="backup_remove_from_recents">Уклони са листе</string>
+  <string name="backup_share">Подели</string>
+  <string name="backup_timestamp">Направљено у</string>
+  <string name="backup_restoring">Враћање резервне копије</string>
+  <string name="backup_restarting">Поновно покретање</string>
+  <string name="restore_contents">Враћање садржаја</string>
+  <string name="restore_success">Опоравак успешан</string>
+  <string name="backup_failed">Прављење резервне копије није успело</string>
+  <string name="restore_failed">Враћање у претходно стање није успело</string>
+  <string name="restore_read_meta_fail">Неважећа датотека резервне копије</string>
+  <string name="backup_share_title">Подели резервну копију</string>
+  <string name="backup_share_text">Резервна копија датотеке Lawnchair</string>
+  <string name="read_external_storage_required">Дозвола за складиштење је потребна за креирање резервне копије</string>
+  <string name="local_backups">Локалне резервне копије</string>
+  <string name="backup_location_device_storage">Меморија уређаја</string>
+  <string name="backup_location_documents_storage">За складиштење докумената</string>
+  <!-- Preference Category Pixel Searchbar Title -->
+  <string name="pref_category_pixel_searchbar">Pixel трака за претрагу</string>
+  <!-- Preference Category Icons Title -->
+  <string name="pref_category_icons">Иконе</string>
+  <!-- Preference Category Drawer Title -->
+  <string name="pref_category_drawer">Фиока</string>
+  <!-- Preference Category Misc Title -->
+  <string name="pref_category_misc">Разно</string>
+  <string name="blur_oom">Lawnchair је остао без меморије покушавајући да замути позадину! Смањивање резолуције позадине могло би да реши ово.</string>
+  <string name="legacy_backup">Наслеђене датотеке резервне копије</string>
+  <!-- About screen -->
+  <string name="title_attribouter_licenses">Лиценца отвореног кода</string>
+  <string name="title_attribouter_email">Е-пошта</string>
+  <string name="title_attribouter_website">Веб страница</string>
+  <string name="title_attribouter_rate">Оцијени</string>
+  <string name="title_attribouter_version">Верзија %1$s</string>
+  <string name="title_attribouter_license">Лиценце</string>
+  <string name="title_attribouter_license_permissions">Дозволе</string>
+  <string name="title_attribouter_license_conditions">Стање</string>
+  <string name="title_attribouter_license_limitations">Ограничења</string>
+  <string name="title_attribouter_more_info">Више Информација</string>
+  <string name="title_attribouter_translators">Преводиоци</string>
+  <string name="about_our_team">Наш тим</string>
+  <string name="about_our_contributors">Наши главни доприносиоци</string>
+  <string name="about_our_family">Наши други чланови породице</string>
+  <string name="about_role_lead">Главни програмер</string>
+  <string name="about_role_devops">ДевОпс</string>
+  <string name="about_role_dev">Програмер</string>
+  <string name="about_role_dev_mod">Пројектант / модератора</string>
+  <string name="about_role_designer">Дизајнер</string>
+  <string name="about_role_special_snowflake">ПР менаџер / модератор</string>
+  <string name="about_role_mod_support">Модератор / Подршка</string>
+  <string name="about_role_family_member">Члан породице</string>
+  <string name="about_bio_deletescape">Програмер за Андроид &amp; ентузијасти, воле меме (мало превише). Оснивач пројекта Lawnchair.</string>
+  <string name="about_bio_divadsn">18 година, претвара кофеин и пицу у код. Такође раније познат као Codebucket.</string>
+  <string name="about_bio_recoded">Благи кодер и графички дизајнер.</string>
+  <string name="about_bio_josh">Самостални графички дизајнер.</string>
+  <string name="about_bio_chris">Креативни ум, саветник за продају &amp; Креатор садржаја. Друштвени медији и ПР менаџер.</string>
+  <string name="about_bio_msfjarvis">Основни програмер на halogenOS-у и апликације на субстратуму.</string>
 </resources>

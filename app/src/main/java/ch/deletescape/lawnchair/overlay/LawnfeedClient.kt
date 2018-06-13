@@ -42,7 +42,7 @@ class LawnfeedClient(private val launcher: Launcher) : ILauncherClient {
     }
 
     private fun connectProxy() {
-        if (Utilities.checkOutdatedLawnfeed(launcher) || !Utilities.getPrefs(launcher).showGoogleNowTab) {
+        if (!Utilities.getPrefs(launcher).showGoogleNowTab) {
             return
         }
 
@@ -61,7 +61,12 @@ class LawnfeedClient(private val launcher: Launcher) : ILauncherClient {
 
     fun reconnect() {
         if (sProxyConnection != null) {
-            state = proxy?.reconnect() ?: 0
+            try {
+                state = proxy?.reconnect() ?: 0
+            } catch(doe: DeadObjectException) {
+                Log.e(TAG, "proxy died", doe)
+                connectProxy()
+            }
             if (state == 0) {
                 launcher.runOnUiThread { notifyStatusChanged(0) }
             } else if (state == 1) {
@@ -229,7 +234,7 @@ class LawnfeedClient(private val launcher: Launcher) : ILauncherClient {
     }
 
     fun onQsbClick(intent: Intent, receiver: QsbReceiver) {
-        ifConnected {
+        if (isConnected) {
             proxy?.onQsbClick(intent)
             qsbReceiver = receiver
         }

@@ -14,7 +14,7 @@
         android:summary="@string/general_pref_summary"
         android:title="@string/general_pref_title"
         app:content="@xml/launcher_desktop_preferences" />
-     
+
     <ch.deletescape.lawnchair.settings.ui.SubPreference
         android:icon="@drawable/ic_dock"
         android:summary="@string/dock_pref_summary"
@@ -33,11 +33,16 @@
         android:icon="@drawable/ic_behavior"
         app:content="@xml/launcher_behavior_preferences" />
 
-    <ch.deletescape.lawnchair.settings.ui.SubPreference
-        android:title="@string/backup_pref_title"
+    <Preference
+        android:key="backups"
+        android:title="@string/backups"
         android:summary="@string/backup_pref_summary"
-        android:icon="@drawable/ic_import_export"
-        app:content="@xml/launcher_backup_preferences" />
+        android:icon="@drawable/ic_import_export">
+
+        <intent
+            android:targetPackage="@string/application_id"
+            android:targetClass="ch.deletescape.lawnchair.backup.BackupListActivity"/>
+    </Preference>
 
     <ch.deletescape.lawnchair.settings.ui.SubPreference
         android:title="@string/debug_pref_title"
@@ -46,16 +51,10 @@
         app:content="@xml/launcher_debug_preferences"
         app:longClickContent="@xml/launcher_hidden_preferences" />
 
-    <ch.deletescape.lawnchair.settings.ui.SubPreference
-        android:title="@string/snowfall_title"
-        android:summary="@string/snowfall_pref_summary"
-        android:icon="@drawable/ic_snowflake"
-        app:content="@xml/launcher_snowfall_preferences" />
-
-    <ch.deletescape.lawnchair.settings.ui.SubPreference
+    <Preference
+        android:key="about"
         android:title="@string/about_title"
         android:summary="@string/about_pref_summary"
-        android:icon="@drawable/ic_information"
-        app:content="@xml/launcher_about_preferences" />
+        android:icon="@drawable/ic_information"/>
 
 </android.support.v7.preference.PreferenceScreen>

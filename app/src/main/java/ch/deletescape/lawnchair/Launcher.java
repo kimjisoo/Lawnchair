@@ -50,6 +50,7 @@ import android.graphics.PorterDuff;
 import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -57,6 +58,7 @@ import android.os.StrictMode;
 import android.os.UserHandle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v4.app.ActivityCompat;
 import android.text.Selection;
 import android.text.SpannableStringBuilder;
 import android.text.TextUtils;
@@ -154,11 +156,12 @@ public class Launcher extends Activity
     private static final int REQUEST_RECONFIGURE_APPWIDGET = 12;
 
     private static final int REQUEST_PERMISSION_CALL_PHONE = 13;
+    public static final int REQUEST_PERMISSION_STORAGE_ACCESS = 666;
 
     private static final int REQUEST_EDIT_ICON = 14;
 
     private static final float BOUNCE_ANIMATION_TENSION = 1.3f;
-    
+
     private static final int SOFT_INPUT_MODE_DEFAULT =
             WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN;
     private static final int SOFT_INPUT_MODE_ALL_APPS =
@@ -265,7 +268,6 @@ public class Launcher extends Activity
 
     private boolean mPaused = true;
     private boolean mOnResumeNeedsLoad;
-    private boolean mSnowfallEnabled;
     private boolean mPlanesEnabled;
     private ObjectAnimator mPlanesAnimator;
 
@@ -366,6 +368,11 @@ public class Launcher extends Activity
     protected void onCreate(Bundle savedInstanceState) {
         FeatureFlags.INSTANCE.loadThemePreference(this);
         Utilities.setupPirateLocale(this);
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O_MR1 && !Utilities.hasStoragePermission(this)) {
+            Utilities.requestStoragePermission(this);
+        }
+
         super.onCreate(savedInstanceState);
 
         setScreenOrientation();
@@ -402,7 +409,6 @@ public class Launcher extends Activity
 
         setContentView(R.layout.launcher);
 
-        mSnowfallEnabled = Utilities.getPrefs(this).getEnableSnowfall();
         mPlanesEnabled = Utilities.getPrefs(this).getEnablePlanes();
         setupViews();
         mDeviceProfile.layout(this, false /* notifyListeners */);
@@ -432,8 +438,8 @@ public class Launcher extends Activity
         IntentFilter filter = new IntentFilter(ACTION_APPWIDGET_HOST_RESET);
         registerReceiver(mUiBroadcastReceiver, filter);
 
-        mLauncherTab = new LauncherTab(this);
         Utilities.showOutdatedLawnfeedPopup(this);
+        mLauncherTab = new LauncherTab(this);
 
         Window window = getWindow();
         WindowManager.LayoutParams attributes = window.getAttributes();
@@ -447,6 +453,7 @@ public class Launcher extends Activity
 
         Utilities.showChangelog(this);
     }
+
 
     private void setScreenOrientation() {
         if (Utilities.getPrefs(this).getEnableScreenRotation()) {
@@ -639,9 +646,12 @@ public class Launcher extends Activity
 
         if (requestCode == REQUEST_EDIT_ICON) {
             if (data != null && data.hasExtra("alternateIcon")) {
-                mEditingItem.setIcon(this, data.getStringExtra("alternateIcon"));
-            } else {
-                mEditingItem.setIcon(this, null);
+                String alternateIcon = data.getStringExtra("alternateIcon");
+                if ("-1".equals(alternateIcon)) {
+                    mEditingItem.setIcon(this, null);
+                } else {
+                    mEditingItem.setIcon(this, alternateIcon);
+                }
             }
             if (mEditingItem.getComponentName() != null)
                 Utilities.updatePackage(this, mEditingItem.getUser(), mEditingItem.getComponentName().getPackageName());
@@ -778,6 +788,20 @@ public class Launcher extends Activity
                 // TODO: Show a snack bar with link to settings
                 Toast.makeText(this, getString(R.string.msg_no_phone_permission,
                         getString(R.string.app_name)), Toast.LENGTH_SHORT).show();
+            }
+        }
+        if (requestCode == REQUEST_PERMISSION_STORAGE_ACCESS){
+            if(ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.READ_EXTERNAL_STORAGE)){
+                final Launcher _this = this;
+                DialogInterface.OnClickListener listener = new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface di, int i) {
+                        Utilities.requestStoragePermission(_this);
+                    }
+                };
+                new AlertDialog.Builder(this).setTitle(R.string.title_storage_permission_required)
+                        .setMessage(R.string.content_storage_permission_required).setPositiveButton(android.R.string.ok, listener)
+                        .setCancelable(false).show();
             }
         }
     }
@@ -1128,15 +1152,6 @@ public class Launcher extends Activity
         mWorkspace = mDragLayer.findViewById(R.id.workspace);
         mQsbContainer = mDragLayer.findViewById(R.id.qsb_container);
         mWorkspace.initParentViews(mDragLayer);
-
-        if (mSnowfallEnabled) {
-            Log.d(TAG, "inflating snowfall");
-            if (!Utilities.isBlacklistedAppInstalled(this)) {
-                getLayoutInflater().inflate(mPlanesEnabled ? R.layout.snowfall_planes : R.layout.snowfall, (ViewGroup) findViewById(R.id.launcher_background), true);
-            } else {
-                getLayoutInflater().inflate(R.layout.snowfall_smiles, (ViewGroup) findViewById(R.id.launcher_background), true);
-            }
-        }
 
         if (mPlanesEnabled) {
             Log.d(TAG, "inflating planes");

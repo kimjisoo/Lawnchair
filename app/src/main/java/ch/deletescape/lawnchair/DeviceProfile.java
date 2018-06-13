@@ -612,7 +612,7 @@ public class DeviceProfile {
                 // Put the page indicators above the hotseat
                 lp.gravity = Gravity.CENTER_HORIZONTAL | Gravity.BOTTOM;
                 lp.height = pageIndicatorHeightPx;
-                lp.bottomMargin = mInsets.bottom + getHotseatHeight();
+                lp.bottomMargin = mInsets.bottom + (hideHotseat ? 0 : getHotseatHeight());
             }
             pageIndicator.setLayoutParams(lp);
         }
@@ -678,7 +678,7 @@ public class DeviceProfile {
     }
 
     public final int getHotseatHeight() {
-        return (hotseatBarHeightPx - hotseatIconSizePxOriginal) + hotseatIconSizePx * Utilities.getNumberOfHotseatRows(mContext);
+        return (hotseatBarHeightPx - hotseatBarTopPaddingPx) * Utilities.getNumberOfHotseatRows(mContext) + hotseatBarTopPaddingPx;
     }
 
     public interface LauncherLayoutChangeListener {

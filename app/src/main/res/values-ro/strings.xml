@@ -102,7 +102,7 @@
   <string name="workspace_new_page">Pagină nouă pe ecranul de pornire</string>
   <!-- Folder accessibility -->
   <!-- The format string for when a folder is opened, speaks the dimensions -->
-  <string name="folder_opened">Dosar deschis, <xliff:g id="WIDTH">%1$d</xliff:g> pe <xliff:g id="HEIGHT">%2$d</xliff:g></string>
+  <string name="folder_opened">Dosar deschis, <xliff:g id="WIDTH">%1$d</xliff:g> de <xliff:g id="HEIGHT">%2$d</xliff:g></string>
   <!-- Instruction that clicking outside will close folder -->
   <string name="folder_tap_to_close">Atingeți pentru a închide dosarul</string>
   <!-- Instruction that clicking outside will commit folder rename -->
@@ -245,7 +245,6 @@
   <string name="notifications_header">Notificări</string>
   <string name="widgets_bottom_sheet_title">Widget-uri %1$s</string>
   <!-- About Lawnchair -->
-  <string name="about_text">Lawnchair este un lansator creat de Till Kottmann (aka deletescape). E bazat pe Launcher3 din AOSP.</string>
   <string name="about_title">Despre</string>
   <string name="about_pref_summary">Aflați despre echipa Lawnchair</string>
   <string name="changelog_title">Jurnalul de modificări pentru a versiunea #%d</string>
@@ -273,6 +272,8 @@
   <string name="num_hotseat_icons_pref_title">Numărul de pictograme în doc</string>
   <string name="icon_scale_pref_title">Scală iconițe</string>
   <string name="hotseat_height_scale">Scară înălţime</string>
+  <string name="hotseat_custom_opacity">Opacitate doc</string>
+  <string name="hotseat_uses_custom_opacity">Activați opacitatea personalizată a docului</string>
   <string name="icon_text_scale_pref_title">Culoare textului de la pictogramă</string>
   <string name="icon_text_padding_scale_pref_title">Scară umplere pictogramă</string>
   <string name="full_width_width_widgets_pref_title">Widget-uri de lăţime completă</string>
@@ -295,6 +296,8 @@
   <string name="debug_pref_summary">Reporniți sau reconstruiți baza de date a pictogramelor</string>
   <string name="show_pixel_bar_pref_title">Arată bara de sus în stilul Pixel</string>
   <string name="use_wide_searchbar_pref_title">Utilizează bara de căutare largă</string>
+  <string name="show_search_pill_title">Afişare Căutare Google</string>
+  <string name="show_date_or_weather_title">Afişare dată/vreme în partea dreaptă</string>
   <string name="show_mic_pref_title">Arată butonul pentru Asistentul Google</string>
   <string name="use_round_searhbar">Utilizează bara de căutare aplicații rotundă</string>
   <string name="pixel_style_icons_pref_title">Utilizează pictograme în stil Pixel</string>
@@ -326,7 +329,7 @@
   <string name="default_text">Implicit</string>
   <string name="edit_icon_reset">Resetare</string>
   <string name="show_top_shadow_title">Afişare umbră de sus</string>
-  <string name="pref_cat_homescreen">Ecranul de pornire</string>
+  <string name="pref_category_homescreen">Desktop</string>
   <string name="theme_pref_title">Temă</string>
   <string name="theme_light">Luminoasă</string>
   <string name="theme_dark">Întunecată</string>
@@ -339,6 +342,7 @@
   <string name="pull_down_search">Deschide căutare</string>
   <string name="pull_down_apps_search">Căutați aplicații</string>
   <string name="enable_screen_rotation">Activaţi rotirea ecranului</string>
+  <string name="use_system_fonts_title">Folosește fonturile de sistem pentru etichete</string>
   <!-- Import/Export Strings -->
   <string name="backup_import_title">Import</string>
   <string name="backup_export_title">Export</string>
@@ -380,10 +384,6 @@
   <string name="animated_clock_icon_title">Pictogramă ceas animată</string>
   <string name="animated_clock_icon_alternative_clock_apps_title">Animare aplicații de ceas alternative</string>
   <string name="animated_clock_icon_alternative_clock_apps_summary">Activați dacă nu utilizați Ceas Google ca aplicație implicită</string>
-  <string name="about_summary_title">Rezumat</string>
-  <string name="about_version">Versiune</string>
-  <string name="about_icon_designer">Designer pictogramă aplicaţie</string>
-  <string name="about_contributors_title">Contribuitori</string>
   <string name="location_permission_warn">Este necesară permisiunea de locație pentru a comuta la alt furnizor!</string>
   <string name="num_cols_drawer_pref_title">Numărul de coloane în lista aplicațiilor</string>
   <string name="shortcut_backport_warning">Acest lucru ar putea fi lent, utilizați pe propriul risc</string>
@@ -395,11 +395,11 @@
   <string name="pref_all_apps_label_color">Culoarea etichetelor pictogramelor în sertarul de aplicații</string>
   <string name="pref_num_rows_drawer">Numărul de rânduri în sertarul de aplicații</string>
   <string name="center_wallpaper_pref_title">Centrează fundalul când este o singură pagină</string>
+  <string name="center_wallpaper_pref_summary">Funcționează numai dacă ecranul de pornire utilizează o singură pagină</string>
   <string name="vertical_drawer_layout_pref_title">Afişare ca listă verticală</string>
   <!-- Time format for Weather Widget -->
   <!-- EEEE is the weekday name, MMMM the month name and d the day of the month -->
   <string name="full_wday_month_day_no_year">EEEE, d MMMM</string>
-  <string name="about_translators">Traducători</string>
   <string name="lock_desktop">Blocare desktop</string>
   <string name="lawnfeed_not_found">Lawnfeed neinstalat</string>
   <string name="google_app_not_found">Aplicația Google nu este instalată</string>
@@ -417,12 +417,84 @@
   <string name="reset_alternative_icons_title">Resetați pictogramele alternative ale aplicațiilor?</string>
   <string name="reset_alternative_icons">Aveți %1$d aplicații cu pictograme alternative, doriți să le resetați?</string>
   <string name="error_no_browser">Nu s-a găsit nicio activitate pentru gestionarea adreselor URL</string>
-  <string name="snowfall_title">Ninsoare</string>
-  <string name="enable_snowfall_title">Activare ninsoare pe ecranul de pornire</string>
-  <string name="enable_snowfall_summary">Poate provoca probleme de performanţă.</string>
-  <string name="snowfall_enabled">\"Să ningă, să ningă, să ningă!\"</string>
-  <string name="snowflake_size_scale">Dimensiunea fulgilor de zăpadă</string>
-  <string name="snowflakes_num">Numărul maxim al fulgilor de zăpadă</string>
+  <!-- Strings for popup dialogs -->
+  <string name="lawnfeed_not_enabled_title">Lawnfeed nu este activat</string>
+  <string name="lawnfeed_not_enabled">Se pare că încercați să deschideți pagina Google Now, dar nu ați activat opțiunea din setările de comportament.\n\nDoriți să o activați acum?</string>
   <string name="lawnfeed_outdated_title">Lawnfeed necesită actualizare</string>
   <string name="lawnfeed_outdated">O versiune mai nouă a programului Lawnfeed este necesară pentru a funcţiona cu această versiune de Lawnchair.\n\nÎnainte de a instala actualizarea, probabil va trebui să dezinstalați versiunea curentă Lawnfeed.\n\nDoriți să o descărcați acum?</string>
+  <string name="title_storage_permission_required">Permisiune de stocare necesară</string>
+  <string name="content_storage_permission_required">În Android 8.1+ este necesară permisiunea de stocare pentru a accesa imaginea de fundal. Fără permisiunea menționată Lawnchair ar putea să se închidă sau să prezinte comportamente neaşteptate.</string>
+  <string name="disable_popup">Nu se mai afișează</string>
+  <string name="backups">Copii de rezervă</string>
+  <string name="new_backup">Creare</string>
+  <string name="restore_backup">Restabilire</string>
+  <string name="backup_name">Nume</string>
+  <string name="backup_location">Locație</string>
+  <string name="choose_backup_path">Răsfoire</string>
+  <string name="backup_homescreen">Ecranul de pornire</string>
+  <string name="backup_contents">Conţinut copie rezervă</string>
+  <string name="backup_settings">Setări</string>
+  <string name="backup_wallpaper">Imagine de fundal</string>
+  <string name="backup_error_blank_name">Numele nu poate fi necompletat</string>
+  <string name="backup_error_blank_location">Locația nu poate fi necompletată</string>
+  <string name="backup_error_blank_contents">Conținutul nu poate fi necompletat</string>
+  <string name="backup_creating">Creare copie de rezervă</string>
+  <string name="no_recent_backups">Nu există copii de rezervă recente</string>
+  <string name="backup_loading">Se încarcă...</string>
+  <string name="backup_invalid">Indisponibil</string>
+  <string name="backup_remove_from_recents">Eliminare din listă</string>
+  <string name="backup_share">Distribuire</string>
+  <string name="backup_timestamp">Creată la</string>
+  <string name="backup_restoring">Restabilire copie de rezervă</string>
+  <string name="backup_restarting">Repornire</string>
+  <string name="restore_contents">Restabilire conţinut</string>
+  <string name="restore_success">Restabilire cu succes</string>
+  <string name="backup_failed">Copia de rezervă a eșuat</string>
+  <string name="restore_failed">Restabilire eșuată</string>
+  <string name="restore_read_meta_fail">Fiş. rez. incorect</string>
+  <string name="backup_share_title">Distribuire copie de rezervă</string>
+  <string name="backup_share_text">Fişier copie de rezervă Lawnchair</string>
+  <string name="read_external_storage_required">Permisiunea de stocare este necesară pentru a crea copia de rezervă</string>
+  <string name="local_backups">Copii de rezervă locale</string>
+  <string name="backup_location_device_storage">Stocare dispozitiv</string>
+  <string name="backup_location_documents_storage">Stocare documente</string>
+  <!-- Preference Category Pixel Searchbar Title -->
+  <string name="pref_category_pixel_searchbar">Bară de căutare Pixel</string>
+  <!-- Preference Category Icons Title -->
+  <string name="pref_category_icons">Pictograme</string>
+  <!-- Preference Category Drawer Title -->
+  <string name="pref_category_drawer">Listă aplicaţii</string>
+  <!-- Preference Category Misc Title -->
+  <string name="pref_category_misc">Diverse</string>
+  <string name="blur_oom">Lawnchair a rămas fără memorie încercând să blureze imaginea de fundal! Scăderea rezoluției imaginii de fundal ar putea remedia acest lucru.</string>
+  <string name="legacy_backup">Fișier vechi copie de rezervă</string>
+  <!-- About screen -->
+  <string name="title_attribouter_licenses">Licențe Open Source</string>
+  <string name="title_attribouter_email">E-mail</string>
+  <string name="title_attribouter_website">Site web</string>
+  <string name="title_attribouter_rate">Evaluare</string>
+  <string name="title_attribouter_version">Versiunea %1$s</string>
+  <string name="title_attribouter_license">Licenţă</string>
+  <string name="title_attribouter_license_permissions">Permisiuni</string>
+  <string name="title_attribouter_license_conditions">Condiții</string>
+  <string name="title_attribouter_license_limitations">Limitări</string>
+  <string name="title_attribouter_more_info">Informații suplimentare</string>
+  <string name="title_attribouter_translators">Traducători</string>
+  <string name="about_our_team">Echipa noastră</string>
+  <string name="about_our_contributors">Principalii noștri contribuitori</string>
+  <string name="about_our_family">Ceilalți membri ai familiei noastre</string>
+  <string name="about_role_lead">Dezvoltator principal</string>
+  <string name="about_role_devops">DevOps</string>
+  <string name="about_role_dev">Dezvoltator</string>
+  <string name="about_role_dev_mod">Dezvoltator / Moderator</string>
+  <string name="about_role_designer">Designer</string>
+  <string name="about_role_special_snowflake">PR Manager / Moderator</string>
+  <string name="about_role_mod_support">Moderator / Suport</string>
+  <string name="about_role_family_member">Membru al familiei</string>
+  <string name="about_bio_deletescape">Dezvoltator și entuziast Android, iubeşte memele (un pic prea mult de fapt). Fondator al proiectului Lawnchair.</string>
+  <string name="about_bio_divadsn">Are 18 ani, transformă cofeina și pizza în cod. De asemenea, anterior cunoscut sub numele de Codebucket.</string>
+  <string name="about_bio_recoded">Coder mediu și designer grafic.</string>
+  <string name="about_bio_josh">Freelance graphic designer.</string>
+  <string name="about_bio_chris">Minte creativă, Influențator și Creator de conținut. Social Media și PR Manager.</string>
+  <string name="about_bio_msfjarvis">Dezvoltator principal al halogenOS și dezvoltator al substratum.</string>
 </resources>

@@ -243,7 +243,6 @@
   <string name="notifications_header">通知</string>
   <string name="widgets_bottom_sheet_title">%1$s 微件</string>
   <!-- About Lawnchair -->
-  <string name="about_text">Lawnchair 是 Till Kottmann（又名deletescape）基于 AOSP 的 Launcher3 所开发的启动器应用程序。</string>
   <string name="about_title">关于</string>
   <string name="about_pref_summary">了解 Lawnchair 团队</string>
   <string name="changelog_title">#%d 版的更新日志</string>
@@ -271,6 +270,8 @@
   <string name="num_hotseat_icons_pref_title">Dock 栏图标数</string>
   <string name="icon_scale_pref_title">图标大小</string>
   <string name="hotseat_height_scale">高度</string>
+  <string name="hotseat_custom_opacity">Dock 栏不透明度</string>
+  <string name="hotseat_uses_custom_opacity">启用自定义 Dock 栏不透明度</string>
   <string name="icon_text_scale_pref_title">图标文本大小</string>
   <string name="icon_text_padding_scale_pref_title">图标间距大小</string>
   <string name="full_width_width_widgets_pref_title">全宽微件</string>
@@ -293,6 +294,8 @@
   <string name="debug_pref_summary">重启或重建图标缓存</string>
   <string name="show_pixel_bar_pref_title">显示 Pixel 顶栏</string>
   <string name="use_wide_searchbar_pref_title">使用宽搜索栏</string>
+  <string name="show_search_pill_title">显示 Google 搜索胶囊</string>
+  <string name="show_date_or_weather_title">将日期 / 天气显示在右侧</string>
   <string name="show_mic_pref_title">显示 Google Assistant 按钮</string>
   <string name="use_round_searhbar">使用圆角应用搜索栏</string>
   <string name="pixel_style_icons_pref_title">使用 Pixel 图标</string>
@@ -324,7 +327,7 @@
   <string name="default_text">默认</string>
   <string name="edit_icon_reset">重置</string>
   <string name="show_top_shadow_title">显示顶部阴影</string>
-  <string name="pref_cat_homescreen">主屏幕</string>
+  <string name="pref_category_homescreen">主屏幕</string>
   <string name="theme_pref_title">主题</string>
   <string name="theme_light">亮色主题</string>
   <string name="theme_dark">暗色主题</string>
@@ -337,6 +340,7 @@
   <string name="pull_down_search">展开搜索</string>
   <string name="pull_down_apps_search">查找应用</string>
   <string name="enable_screen_rotation">启用屏幕旋转</string>
+  <string name="use_system_fonts_title">使用系统字体显示标签</string>
   <!-- Import/Export Strings -->
   <string name="backup_import_title">恢复</string>
   <string name="backup_export_title">备份</string>
@@ -378,10 +382,6 @@
   <string name="animated_clock_icon_title">动态时钟图标</string>
   <string name="animated_clock_icon_alternative_clock_apps_title">为其他时钟应用显示动态图标</string>
   <string name="animated_clock_icon_alternative_clock_apps_summary">当谷歌时钟并非你的默认时钟应用时启用此选项</string>
-  <string name="about_summary_title">概述</string>
-  <string name="about_version">版本</string>
-  <string name="about_icon_designer">图标设计者</string>
-  <string name="about_contributors_title">贡献者</string>
   <string name="location_permission_warn">切换到另一个提供商需要获得位置权限 ！</string>
   <string name="num_cols_drawer_pref_title">抽屉中的网格列数</string>
   <string name="shortcut_backport_warning">该功能可能引起桌面性能下降，请自行承担后果</string>
@@ -393,11 +393,11 @@
   <string name="pref_all_apps_label_color">抽屉应用标签颜色</string>
   <string name="pref_num_rows_drawer">抽屉网格行数</string>
   <string name="center_wallpaper_pref_title">当桌面只有一页时居中壁纸</string>
+  <string name="center_wallpaper_pref_summary">仅当桌面只有一页时才起作用</string>
   <string name="vertical_drawer_layout_pref_title">垂直列表布局</string>
   <!-- Time format for Weather Widget -->
   <!-- EEEE is the weekday name, MMMM the month name and d the day of the month -->
   <string name="full_wday_month_day_no_year">M月dd日EEEE</string>
-  <string name="about_translators">翻译人员</string>
   <string name="lock_desktop">锁定桌面</string>
   <string name="lawnfeed_not_found">未安装 Lawnfeed</string>
   <string name="google_app_not_found">未安装 Google 应用</string>
@@ -415,12 +415,84 @@
   <string name="reset_alternative_icons_title">重置备选应用图标</string>
   <string name="reset_alternative_icons">您有 %1$d 个应用具有备用图标，您想重置它们吗？</string>
   <string name="error_no_browser">没有找到处理此 URL 的 Activity</string>
-  <string name="snowfall_title">降雪</string>
-  <string name="enable_snowfall_title">在主屏幕开启雪花特效</string>
-  <string name="enable_snowfall_summary">这可能会引起性能问题。</string>
-  <string name="snowfall_enabled">“今天的风儿真喧嚣，不如来点儿雪花飘！”</string>
-  <string name="snowflake_size_scale">雪花大小缩放</string>
-  <string name="snowflakes_num">最大雪花数量</string>
+  <!-- Strings for popup dialogs -->
+  <string name="lawnfeed_not_enabled_title">Lawnfeed 未启用</string>
+  <string name="lawnfeed_not_enabled">看起来您正在尝试打开 Google Now 页面，但是您还没有在行为设置中打开这个选项。\n\n您想现在启用吗？</string>
   <string name="lawnfeed_outdated_title">需要更新 Lawnfeed</string>
   <string name="lawnfeed_outdated">当前版本的 Lawnchair 需要安装新版本的 Lawnfeed 来使用，\n\n安装更新前您可能需要卸载当前版本的 Lawnfeed。\n\n需要现在下载吗？</string>
+  <string name="title_storage_permission_required">需要存储权限</string>
+  <string name="content_storage_permission_required">在 Android 8.1 及以上版本中，应用访问壁纸需要存储权限。 没有上述权限许可，Lawnchair 可能会崩溃或出现意外的行为。</string>
+  <string name="disable_popup">不再提示</string>
+  <string name="backups">备份</string>
+  <string name="new_backup">创建备份</string>
+  <string name="restore_backup">还原</string>
+  <string name="backup_name">备份名称</string>
+  <string name="backup_location">备份位置</string>
+  <string name="choose_backup_path">浏览</string>
+  <string name="backup_homescreen">主屏幕</string>
+  <string name="backup_contents">备份内容</string>
+  <string name="backup_settings">备份设定</string>
+  <string name="backup_wallpaper">备份壁纸</string>
+  <string name="backup_error_blank_name">备份名称不得为空</string>
+  <string name="backup_error_blank_location">存储位置不得为空</string>
+  <string name="backup_error_blank_contents">内容不得为空</string>
+  <string name="backup_creating">正在创建备份</string>
+  <string name="no_recent_backups">没有备份</string>
+  <string name="backup_loading">加载中</string>
+  <string name="backup_invalid">不可用</string>
+  <string name="backup_remove_from_recents">从列表中移除</string>
+  <string name="backup_share">分享</string>
+  <string name="backup_timestamp">创建于</string>
+  <string name="backup_restoring">正在恢复备份</string>
+  <string name="backup_restarting">重启中</string>
+  <string name="restore_contents">恢复内容</string>
+  <string name="restore_success">还原成功</string>
+  <string name="backup_failed">备份失败</string>
+  <string name="restore_failed">恢复失败</string>
+  <string name="restore_read_meta_fail">无效备份文件</string>
+  <string name="backup_share_title">分享备份</string>
+  <string name="backup_share_text">Lawnchair 备份文件</string>
+  <string name="read_external_storage_required">创建备份需要存储权限</string>
+  <string name="local_backups">本地备份</string>
+  <string name="backup_location_device_storage">设备存储</string>
+  <string name="backup_location_documents_storage">文档存储</string>
+  <!-- Preference Category Pixel Searchbar Title -->
+  <string name="pref_category_pixel_searchbar">显示 Pixel 顶栏</string>
+  <!-- Preference Category Icons Title -->
+  <string name="pref_category_icons">图标</string>
+  <!-- Preference Category Drawer Title -->
+  <string name="pref_category_drawer">应用抽屉</string>
+  <!-- Preference Category Misc Title -->
+  <string name="pref_category_misc">杂项</string>
+  <string name="blur_oom">Lawnchair 在尝试模糊壁纸时耗尽内存啦! 降低壁纸分辨率可能修复该问题。</string>
+  <string name="legacy_backup">旧备份文件</string>
+  <!-- About screen -->
+  <string name="title_attribouter_licenses">开放源代码许可</string>
+  <string name="title_attribouter_email">邮件</string>
+  <string name="title_attribouter_website">网站</string>
+  <string name="title_attribouter_rate">评分</string>
+  <string name="title_attribouter_version">版本号 %1$s</string>
+  <string name="title_attribouter_license">许可</string>
+  <string name="title_attribouter_license_permissions">权限</string>
+  <string name="title_attribouter_license_conditions">许可状态</string>
+  <string name="title_attribouter_license_limitations">许可限制</string>
+  <string name="title_attribouter_more_info">更多信息</string>
+  <string name="title_attribouter_translators">翻译人员</string>
+  <string name="about_our_team">团队信息</string>
+  <string name="about_our_contributors">主要贡献者</string>
+  <string name="about_our_family">其他团队成员</string>
+  <string name="about_role_lead">首席开发者</string>
+  <string name="about_role_devops">调试</string>
+  <string name="about_role_dev">开发者</string>
+  <string name="about_role_dev_mod">开发者 / 主席</string>
+  <string name="about_role_designer">设计者</string>
+  <string name="about_role_special_snowflake">公关经理 / 主席</string>
+  <string name="about_role_mod_support">其他管理和支持</string>
+  <string name="about_role_family_member">团队成员</string>
+  <string name="about_bio_deletescape">安卓开发者 &amp; 爱好者, 喜欢玩梗(玩得有点过火了)。Lawnchair 项目的创始人。</string>
+  <string name="about_bio_divadsn">18岁, 把咖啡因和披萨变成代码。以前也被称为 Codebucket。</string>
+  <string name="about_bio_recoded">温和的程序员和图形设计师。</string>
+  <string name="about_bio_josh">自由的图像设计师。</string>
+  <string name="about_bio_chris">创造性思维、影响者和内容创造者。社交媒体和公关经理。</string>
+  <string name="about_bio_msfjarvis">HalogenOS 的核心开发者和 substratum 的应用程序开发者。</string>
 </resources>
